@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malecombo Trading Enterprise CC | Mining, Construction & Civil Works</title>
+  <meta name="description" content="100% Black-owned construction company specializing in mining infrastructure, civil works, and engineering services in Limpopo and Mpumalanga.">
+  <meta name="keywords" content="construction company, civil works, mining infrastructure, Limpopo, Mpumalanga, engineering services, Malecombo">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-blue: #005B96;
+      --secondary-green: #2E8B57;
+      --whatsapp-green: #25D366;
+      --light-gray: #F5F5F5;
+      --dark-gray: #5A5A5A;
+      --text: #333333;
+      --white: #FFFFFF;
+      --gold: #D4AF37;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Lato', sans-serif; color: var(--text); line-height: 1.6; background-color: #fafafa; }
+    h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 1rem; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
+    
+    /* Header & Nav */
+    header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
+    .logo { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+    .logo img { height: 65px; width: auto; }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-text span:first-child { font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--primary-blue); line-height: 1.2; }
+    .logo-text span:last-child { font-size: 0.85rem; color: var(--dark-gray); font-weight: 600; }
+    
+    .nav-links { display: flex; gap: 25px; }
+    .nav-links a { text-decoration: none; color: var(--dark-gray); font-weight: 600; font-size: 1rem; transition: color 0.3s; position: relative; }
+    .nav-links a:hover, .nav-links a.active { color: var(--primary-blue); }
+    .nav-links a:after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--primary-blue); transition: width 0.3s; }
+    .nav-links a:hover:after, .nav-links a.active:after { width: 100%; }
+    
+    .btn { display: inline-block; background-color: var(--primary-blue); color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; font-weight: 600; font-family: 'Poppins', sans-serif; transition: background 0.3s; border: none; cursor: pointer; font-size: 1rem; }
+    .btn:hover { background-color: #004471; }
+    .btn-whatsapp { background-color: var(--whatsapp-green); }
+    .btn-whatsapp:hover { background-color: #1ebe57; }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed; bottom: 25px; right: 25px; background-color: var(--whatsapp-green); color: white;
+      width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
+    .whatsapp-float svg { width: 35px; height: 35px; fill: white; }
+    .whatsapp-tooltip {
+      position: absolute; right: 75px; background: #333; color: white; padding: 6px 12px; border-radius: 4px;
+      font-size: 0.85rem; white-space: nowrap; opacity: 0; transition: opacity 0.3s; pointer-events: none;
+    }
+    .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+
+    /* Hero Section */
+    .hero { 
+      background: linear-gradient(rgba(0, 91, 150, 0.85), rgba(0, 91, 150, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center; 
+      background-size: cover; color: white; text-align: center; padding: 100px 20px; 
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 16px; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; }
+    .hero .company-badge { background: rgba(255, 215, 0, 0.2); border: 1px solid var(--gold); color: var(--gold); padding: 5px 15px; border-radius: 20px; font-weight: 600; display: inline-block; margin-bottom: 20px; font-size: 0.9rem; }
+
+    /* Sections */
+    section { padding: 60px 0; }
+    .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: var(--primary-blue); }
+    
+    /* Services & Projects Grid */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+    .service-card { background: var(--white); padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .service-card:hover { transform: translateY(-5px); }
+    .service-card h3 { margin-top: 10px; font-size: 1.25rem; color: var(--primary-blue); }
+    .service-card ul { list-style: none; margin: 15px 0; }
+    .service-card li { padding: 8px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start; }
+    .service-card li:before { content: "✓"; color: var(--secondary-green); font-weight: bold; margin-right: 10px; flex-shrink: 0; }
+
+    /* Features */
+    .features { background-color: var(--light-gray); }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+    .feature { display: flex; align-items: flex-start; gap: 15px; }
+    .feature-icon { background: var(--primary-blue); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem; }
+
+    /* Contact Form */
+    .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Lato', sans-serif; }
+    .contact-info { background: var(--light-gray); padding: 25px; border-radius: 8px; }
+    .contact-info p { margin: 12px 0; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .contact-info a { color: var(--primary-blue); text-decoration: none; }
+    .contact-info a:hover { text-decoration: underline; }
+    .whatsapp-link { color: var(--whatsapp-green) !important; font-weight: bold; display: inline-flex; align-items: center; gap: 5px; }
+    .guarantee { background: #e8f5e9; padding: 15px; border-radius: 6px; text-align: center; font-weight: 600; color: var(--secondary-green); margin-top: 20px; }
+
+    /* Footer */
+    footer { background: var(--primary-blue); color: white; text-align: center; padding: 30px 0 20px; margin-top: 40px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 20px; text-align: left; }
+    .footer-section h3 { color: white; margin-bottom: 15px; font-size: 1.2rem; }
+    .footer-section p, .footer-section a { color: #e0e0e0; text-decoration: none; display: block; margin: 8px 0; transition: color 0.3s; }
+    .footer-section a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; font-size: 0.9rem; color: #e0e0e0; }
+
+    /* Page Navigation */
+    .page { display: none; }
+    .page.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* Mobile menu */
+    .menu-toggle { display: none; flex-direction: column; cursor: pointer; padding: 10px; }
+    .bar { width: 25px; height: 3px; background: var(--primary-blue); margin: 3px 0; }
+    .mobile-menu { display: none; position: absolute; top: 85px; left: 0; width: 100%; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 99; }
+    .mobile-menu a { display: block; padding: 15px; text-align: center; text-decoration: none; color: var(--dark-gray); border-bottom: 1px solid #eee; font-weight: 600; }
+    .mobile-menu a:hover { background: var(--light-gray); color: var(--primary-blue); }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: flex; }
+      .contact-container { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero { padding: 60px 20px; }
+      .logo-text span:first-child { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo" data-page="home">
+          <!-- LOGO IMAGE: Ensure 'logo.png' is uploaded to your public_html folder -->
+          <img src="logo.png" alt="Malecombo Logo">
+          <div class="logo-text">
+            <span>Malecombo Trading Enterprise CC</span>
+            <span>Mining & Construction Services</span>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="#" class="nav-link active" data-page="home">Home</a>
+          <a href="#" class="nav-link" data-page="about">About</a>
+          <a href="#" class="nav-link" data-page="services">Services</a>
+          <a href="#" class="nav-link" data-page="projects">Projects</a>
+          <a href="#" class="nav-link" data-page="contact">Contact</a>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        </div>
+      </nav>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#" class="nav-link active" data-page="home">Home</a>
+        <a href="#" class="nav-link" data-page="about">About</a>
+        <a href="#" class="nav-link" data-page="services">Services</a>
+        <a href="#" class="nav-link" data-page="projects">Projects</a>
+        <a href="#" class="nav-link" data-page="contact">Contact</a>
+      </div>
+    </div>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/27788195158?text=Hello%20Malecombo,%20I%20would%20like%20to%20enquire%20about%20your%20construction%20and%20mining%20services." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+      <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958C9.72 31.016 12.742 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.32 22.616c-.388 1.096-1.932 2.008-3.176 2.272-.852.18-1.964.324-5.708-1.224-4.796-1.984-7.884-6.84-8.124-7.156-.232-.316-1.932-2.572-1.932-4.904s1.224-3.472 1.66-3.948c.436-.476.952-.592 1.268-.592.316 0 .632.004.908.016.292.012.68-.11 1.064.812.388.936 1.324 3.228 1.44 3.464.116.236.196.512.04.828-.156.316-.236.512-.472.788-.236.276-.496.616-.708.828-.236.236-.484.492-.208.968.276.476 1.228 2.024 2.632 3.272 1.812 1.612 3.34 2.112 3.816 2.348.476.236.752.196 1.028-.116.276-.316 1.188-1.384 1.504-1.86.316-.476.632-.396 1.068-.236.436.156 2.756 1.3 3.232 1.536.476.236.792.356.908.552.116.196.116 1.128-.272 2.224z"/></svg>
+    </a>
+  </header>
+
+  <!-- HOME PAGE -->
+  <div id="home" class="page active">
+    <section class="hero">
+      <div class="container">
+        <span class="company-badge">100% Black Owned | B-BBEE Compliant</span>
+        <h1>Quality Construction & Civil Works for Mining and Infrastructure Projects</h1>
+        <p>Providing expert construction and civil engineering services across Limpopo and Mpumalanga since 2011. Delivering safety, quality, and transformation on every project.</p>
+        <a href="#" class="btn" data-page="contact">Get a Project Quote</a>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="section-title">Our Core Specializations</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🏗️</div>
+          <h3>Mining Civil Works</h3>
+          <ul>
+            <li>Form-work design, erection and striking for mining structures</li>
+            <li>Steel fixing and reinforcing for mining concrete structures</li>
+            <li>Mass concrete and structural concrete works</li>
+            <li>Shaft development civil support</li>
+            <li>Surface and underground piping installation</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🛠️</div>
+          <h3>Construction Services</h3>
+          <ul>
+            <li>Commercial and industrial building construction</li>
+            <li>Residential building construction</li>
+            <li>Civil engineering construction</li>
+            <li>Road maintenance and repairs</li>
+            <li>Water reservoirs, bridges, tunnels and dams</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🔧</div>
+          <h3>Support Services & Plant Hire</h3>
+          <ul>
+            <li>Drill & blast support services</li>
+            <li>Concentrator & process plant maintenance</li>
+            <li>Cleaning & industrial housekeeping</li>
+            <li>Construction plant & equipment hire</li>
+            <li>Electrical engineering and supply</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Why Partner With Malecombo?</h2>
+        <div class="features-grid">
+          <div class="feature"><div class="feature-icon">✅</div><div><strong>Proven Expertise</strong> – 10+ years of experience in mining and construction projects across Limpopo and Mpumalanga.</div></div>
+          <div class="feature"><div class="feature-icon">🏆</div><div><strong>Quality Assurance</strong> – Rigorous quality control systems ensuring compliance with all specifications.</div></div>
+          <div class="feature"><div class="feature-icon">👷</div><div><strong>Skilled Workforce</strong> – Experienced personnel with specialized skills in mining infrastructure.</div></div>
+          <div class="feature"><div class="feature-icon">🤝</div><div><strong>Community Focus</strong> – Committed to local employment, skills development, and transformation.</div></div>
+          <div class="feature"><div class="feature-icon">🛡️</div><div><strong>Safety First</strong> – Zero harm approach to all operations, meeting Anglo American's SHEQ standards.</div></div>
+          <div class="feature"><div class="feature-icon">📊</div><div><strong>Project Excellence</strong> – On-time, on-budget delivery with meticulous attention to detail.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="text-align: center; background: var(--light-gray); padding: 40px 20px; border-radius: 8px;">
+      <h2>Ready to Start Your Construction Project?</h2>
+      <p>Get a free project assessment and quotation today.</p>
+      <p style="margin: 20px 0;">
+        📞 <strong>Call:</strong> 078 819 5158 / 063 516 0456<br>
+        ✉️ <strong>Email:</strong> malecombop@gmail.com<br>
+        📍 <strong>Business Address:</strong> Stand No 1240, Sekgakgapeng, Mokopane, 0651
+      </p>
+      <a href="#" class="btn" data-page="contact">Request Project Quote</a>
+    </section>
+  </div>
+
+  <!-- ABOUT PAGE -->
+  <div id="about" class="page">
+    <section class="container">
+      <h2 class="section-title">About Malecombo Trading Enterprise CC</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;">
+        <div>
+          <h3>Company Overview</h3>
+          <p>Malecombo Trading Enterprise CC was registered as a Close Corporation on 03 May 2011. The company is a multi-disciplinary business entity that has progressively positioned itself in the local, provincial, and national trading landscape within the mining, construction, and civil works sectors.</p>
+          <p>As an equal opportunity, 100% Black-owned enterprise with full interest holding, we were established to address the overall needs of the mining industry, building and construction, and civil engineering — delivering quality, safety, and transformation across all our projects.</p>
+          
+          <h3 style="margin-top: 30px;">Our Vision</h3>
+          <p>To design and implement modern infrastructure through data-driven construction in the Mining Industry and other sectors, becoming a recognised leader in mining civil and construction support services in South Africa.</p>
+          
+          <h3 style="margin-top: 30px;">Our Mission</h3>
+          <p>To supply the best construction and civil engineering services to our clients — on time, within budget, safely, and to specification — while developing our people and empowering local communities.</p>
+        </div>
+        <div>
+          <h3>Management Structure</h3>
+          <div style="margin-bottom: 20px;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: var(--primary-blue);">Elias Malose Bambo — Managing Director</div>
+            <p>Mr. Bambo brings over ten years of hands-on operational experience gained at Anglo American Platinum's Mogalakwena Complex (Valterra). His experience spans surface drill and blast operations as well as concentrator plant operations, giving Malecombo a unique combination of mining production knowledge and construction execution capability.</p>
+          </div>
+          
+          <div style="background: var(--light-gray); padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h4>Key Operational Expertise:</h4>
+            <ul style="padding-left: 20px; margin-top: 10px;">
+              <li><strong>Surface Blast-Hole Drill Operations:</strong> Certified operator with experience in hard-rock platinum reef geology (Atlas Copco / Epiroc PV-351 Pit Viper & Smartrock monitoring).</li>
+              <li><strong>Concentrator Plant Operations:</strong> Direct experience in unblocking process pipework, unchoking screeners, maintaining conveyor belt systems, and collecting process samples.</li>
+            </ul>
+          </div>
+          
+          <h3>Core Values</h3>
+          <ul style="margin: 20px 0; padding-left: 20px;">
+            <li>Best business practice and principles</li>
+            <li>Safety — zero harm to people and the environment</li>
+            <li>Discipline and accountability</li>
+            <li>Loyalty to clients, employees, and communities</li>
+            <li>Productive behaviour and continuous improvement</li>
+            <li>Trust and integrity in all dealings</li>
+          </ul>
+        </div>
+        </div>
+      
+      <h3 style="text-align: center; margin: 40px 0 20px;">Compliance & Statutory Information</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px;">
+        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+          <div style="font-weight: bold; color: var(--primary-blue);">Company Registration</div>
+          <div>2011/066408/23 (Active)</div>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+          <div style="font-weight: bold; color: var(--primary-blue);">SARS Tax Clearance</div>
+          <div>Good Standing - Current</div>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+          <div style="font-weight: bold; color: var(--primary-blue);">B-BBEE Status</div>
+          <div>100% Black Owned</div>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+          <div style="font-weight: bold; color: var(--primary-blue);">CIDB Registration</div>
+          <div>Registered</div>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+          <div style="font-weight: bold; color: var(--primary-blue);">COID</div>
+          <div>Letter of Good Standing</div>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+          <div style="font-weight: bold; color: var(--primary-blue);">ISO 9001:2015</div>
+          <div>In Process</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SERVICES PAGE -->
+  <div id="services" class="page">
+    <section class="container">
+      <h2 class="section-title">Our Specialized Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🏗️</div>
+          <h3>Civil Engineering Construction</h3>
+          <ul>
+            <li>Routine road maintenance (signs, lay-byes, gabions, guardrails)</li>
+            <li>Emergency road repairs, fencing, and bush clearing</li>
+            <li>Road marking, paving, and road caps</li>
+            <li>Water reservoirs, sub-divisions, sewer systems, bridges, tunnels, and dams</li>
+            <li>V-drains, pre-cast elements, and stormwater structures</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🏢</div>
+          <h3>Commercial & Industrial Building</h3>
+          <ul>
+            <li>Construction and design of commercial malls and industrial facilities</li>
+            <li>Form-work and steel fixing / reinforcing (bar, mesh, post-tension)</li>
+            <li>Concrete mixing and pouring (mass and structural)</li>
+            <li>Steel structuring and boiler making</li>
+            <li>Scaffolding and shutter board supply / hire</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🏠</div>
+          <h3>Residential Building Construction</h3>
+          <ul>
+            <li>Grading, bulk earthworks, and excavation</li>
+            <li>Foundations, pest control, framing, and box cutting</li>
+            <li>Rough electrical wiring and rough plumbing</li>
+            <li>Brick laying, installation of windows and doors</li>
+            <li>Timber, steel, and thatch roofing; siding and plumbing</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">⛏️</div>
+          <h3>Mining & Industrial Civil Works</h3>
+          <ul>
+            <li>Form-work and steel fixing for mining concrete structures</li>
+            <li>Shaft development civil support and concrete shaft lining</li>
+            <li>Surface and underground piping installation and maintenance</li>
+            <li>Tailings storage facility (TSF) rehabilitation</li>
+            <li>Bulk earthworks, haul road construction, and security fencing (ClearVu/Razor wire)</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🔧</div>
+          <h3>Drill & Blast Support Services</h3>
+          <ul>
+            <li>Surface blast-hole drilling (large-diameter rotary drilling)</li>
+            <li>Drill pattern layout and hole positioning</li>
+            <li>Drill rig scheduling and dispatch coordination</li>
+            <li>Blasting supervision and compliance (Competent A)</li>
+            <li>Drill crew supervision and rock-type specific drilling knowledge</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🧹</div>
+          <h3>Plant Maintenance & Cleaning</h3>
+          <ul>
+            <li>Process pipe unblocking and screener unchoking</li>
+            <li>Conveyor belt attendance and maintenance support</li>
+            <li>Commercial and industrial cleaning services</li>
+            <li>Site clearing, waste management, and high-pressure water jetting</li>
+            <li>Plant shutdown and planned maintenance support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PROJECTS PAGE -->
+  <div id="projects" class="page">
+    <section class="container">
+      <h2 class="section-title">Our Completed Projects</h2>
+      <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">See the quality of our work. We've successfully completed numerous projects across Limpopo and Mpumalanga.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Ivanplats Platreef – Hitch Foundation Shaft 2</h3>
+          <p><strong>Client:</strong> Ivanplats (Pty) Ltd</p>
+          <p><strong>Location:</strong> Mokopane, Limpopo</p>
+          <p><strong>Scope:</strong> Form-work, steel fixing, reinforcing, and concrete works for Shaft 2 hitch foundation.</p>
+        </div>
+        <div class="service-card">
+          <h3>ClearVu & Razor Wire Security Fencing</h3>
+          <p><strong>Client:</strong> Anglo American Platinum (Mogalakwena Mine)</p>
+          <p><strong>Location:</strong> Mokopane, Limpopo</p>
+          <p><strong>Scope:</strong> Supply and installation of high-security panel fencing and razor wire perimeter security.</p>
+        </div>
+        <div class="service-card">
+          <h3>The Crossing Mall Parking Structure</h3>
+          <p><strong>Client:</strong> Commercial Client / Main Contractor</p>
+          <p><strong>Location:</strong> Mokopane, Limpopo</p>
+          <p><strong>Scope:</strong> Steel fixing, reinforcing, form-work, and concrete works for multi-level parking structure.</p>
+        </div>
+        <div class="service-card">
+          <h3>Nkakabidi High School</h3>
+          <p><strong>Client:</strong> Department of Education</p>
+          <p><strong>Location:</strong> Sekgakgapeng, Limpopo</p>
+          <p><strong>Scope:</strong> Full building construction including foundations, brick laying, roofing, windows, doors, and finishing.</p>
+        </div>
+        <div class="service-card">
+          <h3>Radingwana & Pienaars River Bridges</h3>
+          <p><strong>Client:</strong> RSC Mpumalanga</p>
+          <p><strong>Location:</strong> Limpopo / Gauteng border</p>
+          <p><strong>Scope:</strong> Material supply and construction support for bridge infrastructure projects.</p>
+        </div>
+        <div class="service-card">
+          <h3>Basilread Pipeline – Olifants River</h3>
+          <p><strong>Client:</strong> RSC Burgersfort</p>
+          <p><strong>Location:</strong> Burgersfort / Steelpoort</p>
+          <p><strong>Scope:</strong> Supply and logistics support for pipeline installation on the Olifants River.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="contact" class="page">
+    <section class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">Get in touch with us today for a free project assessment and quotation.</p>
+
+      <div class="contact-container">
+        <!-- FORMSPREE INTEGRATION -->
+        <form id="contactForm" action="https://formspree.io/f/xgvrqzgk" method="POST">
+          <input type="hidden" name="_subject" value="New Malecombo Project Quote Request">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company Name (if applicable)</label>
+            <input type="text" id="company" name="company">
+          </div>
+          <div class="form-group">
+            <label for="projectType">Project Type</label>
+            <select id="projectType" name="project_type" required>
+              <option value="">Select a service...</option>
+              <option value="mining">Mining Civil Works</option>
+              <option value="construction">Construction Project</option>
+              <option value="maintenance">Maintenance & Repairs</option>
+              <option value="drilling">Drill & Blast Support</option>
+              <option value="hire">Equipment / Plant Hire</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" rows="4" placeholder="Please describe your project requirements, location, and timeline..."></textarea>
+          </div>
+          <button type="submit" class="btn" style="width: 100%;">Request Project Quote</button>
+        </form>
+
+        <div class="contact-info">
+          <h3>Business Information</h3>
+          <p><strong>Registered Name:</strong> Malecombo Trading Enterprise CC</p>
+          <p><strong>Registration Number:</strong> 2011/066408/23</p>
+          <p><strong>VAT Number:</strong> 4090296379</p>
+          <p><strong>Business Address:</strong> Stand No 1240, Sekgakgapeng, Mokopane, 0651</p>
+          <p><strong>Postal Address:</strong> P.O. Box 9207, Sekgakgapeng, Mokopane, 0651</p>
+          
+          <h3 style="margin-top: 25px;">Contact Details</h3>
+          <p>📞 <strong>Primary:</strong> <a href="tel:0788195158">078 819 5158</a> 
+             <a href="https://wa.me/27788195158?text=Hello%20Malecombo,%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="whatsapp-link">💬 WhatsApp</a>
+          </p>
+          <p>📞 <strong>Secondary:</strong> <a href="tel:0635160456">063 516 0456</a> 
+             <a href="https://wa.me/27635160456?text=Hello%20Malecombo,%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="whatsapp-link">💬 WhatsApp</a>
+          </p>
+          <p>✉️ <strong>Email:</strong> <a href="mailto:malecombop@gmail.com">malecombop@gmail.com</a></p>
+          
+          <h3 style="margin-top: 25px;">Working Hours</h3>
+          <p>Monday - Friday: 7:00 AM - 5:00 PM</p>
+          <p>Saturday: 8:00 AM - 1:00 PM</p>
+          <p>Sunday: Emergency call-outs only</p>
+          
+          <h3 style="margin-top: 25px;">Service Areas</h3>
+          <p>Limpopo Province (Mokopane, Sekgakgapeng, Tzaneen, Polokwane)</p>
+          <p>Mpumalanga Province (Steelpoort, Burgersfort)</p>
+          <p>Gauteng (Selected Projects)</p>
+
+          <!-- Large WhatsApp Quote Button -->
+          <div style="text-align: center; margin-top: 30px;">
+            <a href="https://wa.me/27788195158?text=Hello%20Malecombo,%20I%20would%20like%20to%20request%20a%20PROJECT%20QUOTE.%20Please%20let%20me%20know%20what%20details%20you%20need." target="_blank" class="btn btn-whatsapp" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 1.1rem; padding: 15px;">
+              <svg viewBox="0 0 32 32" style="width: 28px; height: 28px; fill: white;"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958C9.72 31.016 12.742 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.32 22.616c-.388 1.096-1.932 2.008-3.176 2.272-.852.18-1.964.324-5.708-1.224-4.796-1.984-7.884-6.84-8.124-7.156-.232-.316-1.932-2.572-1.932-4.904s1.224-3.472 1.66-3.948c.436-.476.952-.592 1.268-.592.316 0 .632.004.908.016.292.012.68-.11 1.064.812.388.936 1.324 3.228 1.44 3.464.116.236.196.512.04.828-.156.316-.236.512-.472.788-.236.276-.496.616-.708.828-.236.236-.484.492-.208.968.276.476 1.228 2.024 2.632 3.272 1.812 1.612 3.34 2.112 3.816 2.348.476.236.752.196 1.028-.116.276-.316 1.188-1.384 1.504-1.86.316-.476.632-.396 1.068-.236.436.156 2.756 1.3 3.232 1.536.476.236.792.356.908.552.116.196.116 1.128-.272 2.224z"/></svg>
+              Request Quick Quote via WhatsApp
+            </a>
+          </div>
+          
+          <div class="guarantee" style="margin-top: 30px;">
+            ✅ All projects include our commitment to quality, safety, and on-time delivery.
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Malecombo Trading Enterprise CC</h3>
+          <p>Providing quality construction, civil engineering, and mining support services since 2011.</p>
+          <p style="color: var(--gold); font-weight: bold; margin-top: 10px;">100% Black Owned | B-BBEE Compliant</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="#" data-page="home">Home</a>
+          <a href="#" data-page="about">About Us</a>
+          <a href="#" data-page="services">Services</a>
+          <a href="#" data-page="projects">Projects</a>
+          <a href="#" data-page="contact">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>📞 <a href="tel:0788195158" style="color: #e0e0e0;">078 819 5158</a> / <a href="tel:0635160456" style="color: #e0e0e0;">063 036 7794</a></p>
+          <p>✉️ <a href="mailto:malecombop@gmail.com" style="color: #e0e0e0;">malecombop@gmail.com</a></p>
+          <p>📍 Stand No 1240, Sekgakgapeng, Mokopane, 0651</p>
+          <p><a href="https://wa.me/27788195158" target="_blank" style="color: var(--whatsapp-green); font-weight: bold; margin-top: 5px; display: inline-block;">💬 Chat on WhatsApp</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Business Hours</h3>
+          <p>Mon - Fri: 7:00 AM - 5:00 PM</p>
+          <p>Saturday: 8:00 AM - 1:00 PM</p>
+          <p>Sunday: Emergency only</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Malecombo Trading Enterprise CC. All rights reserved.</p>
+        <p>Reg: 2011/066408/23 | VAT No: 4090296379 | B-BBEE Status: 100% Black Owned</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Page Navigation Logic
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+      
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if(link.getAttribute('data-page') === pageId) link.classList.add('active');
+      });
+      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      if(pageId === 'contact') {
+        setTimeout(() => {
+          const formSection = document.getElementById('contact');
+          if(formSection) {
+            window.scrollTo({ top: formSection.offsetTop - 100, behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    }
+
+    // Attach click events to all navigation links and buttons with data-page attribute
+    document.querySelectorAll('.nav-link, .btn[data-page], .logo').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const pageId = this.getAttribute('data-page') || 'home';
+        showPage(pageId);
+      });
+    });
+
+    // Formspree AJAX Submission Handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending Quote Request...';
+      submitBtn.disabled = true;
+
+      fetch(this.action, { 
+        method: 'POST', 
+        body: new FormData(this), 
+        headers: { 'Accept': 'application/json' } 
+      })
+      .then(response => {
+        if(response.ok) {
+          alert('Thank you! Your quote request has been sent successfully. Malecombo will contact you within 24 hours.');
+          this.reset();
+        } else {
+          alert('Oops! Something went wrong. Please WhatsApp us directly at 078 819 5158 for a quick quote.');
+        }
+      })
+      .catch(error => {
+        alert('Error: ' + error.message);
+      })
+      .finally(() => { 
+        submitBtn.textContent = originalText; 
+        submitBtn.disabled = false; 
+      });
+    });
+
+    // Mobile Menu Toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+    
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', function() { 
+        document.getElementById('mobileMenu').style.display = 'none'; 
+      });
+    });
+  </script>
+
+</body>
+</html>
