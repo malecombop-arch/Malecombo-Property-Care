@@ -1,0 +1,32 @@
+<svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gear Circle -->
+  <circle cx="80" cy="90" r="70" fill="#6B6B6B"/>
+  <circle cx="80" cy="90" r="56" fill="#8B8B8B"/>
+  
+  <!-- Gear Teeth -->
+  <g id="teeth">
+    <rect x="76" y="12" width="8" height="16" fill="#6B6B6B"/>
+    <rect x="112" y="32" width="16" height="8" fill="#6B6B6B" transform="rotate(45 120 36)"/>
+    <rect x="124" y="90" width="16" height="8" fill="#6B6B6B"/>
+    <rect x="112" y="148" width="16" height="8" fill="#6B6B6B" transform="rotate(-45 120 152)"/>
+    <rect x="76" y="168" width="8" height="16" fill="#6B6B6B"/>
+    <rect x="36" y="148" width="16" height="8" fill="#6B6B6B" transform="rotate(45 44 152)"/>
+    <rect x="24" y="90" width="16" height="8" fill="#6B6B6B"/>
+    <rect x="36" y="32" width="16" height="8" fill="#6B6B6B" transform="rotate(-45 44 36)"/>
+  </g>
+  
+  <!-- Inner Circle -->
+  <circle cx="80" cy="90" r="36" fill="white"/>
+  <circle cx="80" cy="90" r="28" fill="#A9A9A9"/>
+  
+  <!-- Center Mark -->
+  <circle cx="80" cy="90" r="12" fill="#6B6B6B"/>
+  
+  <!-- Cyan Bars -->
+  <rect x="140" y="60" width="240" height="16" fill="#5DADE2"/>
+  <rect x="140" y="120" width="240" height="16" fill="#5DADE2"/>
+  
+  <!-- Company Text -->
+  <text x="180" y="100" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="bold" fill="#000000" letter-spacing="2">MALECOMBO</text>
+  <text x="180" y="135" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#000000" letter-spacing="1">TRADING ENTERPRISE CC</text>
+</svg>
