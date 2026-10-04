@@ -6,35 +6,40 @@
   <title>Malecombo Trading Enterprise CC | Mining, Construction & Civil Works</title>
   <meta name="description" content="100% Black-owned construction company specializing in mining infrastructure, civil works, and engineering services in Limpopo and Mpumalanga.">
   <meta name="keywords" content="construction company, civil works, mining infrastructure, Limpopo, Mpumalanga, engineering services, Malecombo">
+  
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     :root {
       --primary-blue: #005B96;
+      --dark-blue: #003366;
       --secondary-green: #2E8B57;
       --whatsapp-green: #25D366;
-      --cyan-accent: #5DADE2;
       --light-gray: #F5F5F5;
       --dark-gray: #5A5A5A;
       --text: #333333;
       --white: #FFFFFF;
       --gold: #D4AF37;
+      --footer-bg: #0b1c2e;
+      --footer-text: #a0aec0;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Lato', sans-serif; color: var(--text); line-height: 1.6; background-color: #fafafa; }
-    h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 1rem; }
+    h1, h2, h3, h4, h5 { font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 1rem; }
     .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
     
     /* Header & Nav */
     header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
     nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
     .logo { display: flex; align-items: center; gap: 15px; text-decoration: none; }
-    .logo svg { height: 70px; width: auto; display: block; }
+    .logo svg { height: 60px; width: auto; display: block; }
     
     .nav-links { display: flex; gap: 25px; }
-    .nav-links a { text-decoration: none; color: var(--dark-gray); font-weight: 600; font-size: 1rem; transition: color 0.3s; position: relative; }
+    .nav-links a { text-decoration: none; color: var(--dark-gray); font-weight: 600; font-size: 0.95rem; transition: color 0.3s; position: relative; }
     .nav-links a:hover, .nav-links a.active { color: var(--primary-blue); }
     .nav-links a:after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--primary-blue); transition: width 0.3s; }
     .nav-links a:hover:after, .nav-links a.active:after { width: 100%; }
@@ -47,56 +52,56 @@
     /* Floating WhatsApp Button */
     .whatsapp-float {
       position: fixed; bottom: 25px; right: 25px; background-color: var(--whatsapp-green); color: white;
-      width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s;
+      width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s;
     }
-    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
-    .whatsapp-float svg { width: 35px; height: 35px; fill: white; }
+    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float svg { width: 32px; height: 32px; fill: white; }
     .whatsapp-tooltip {
-      position: absolute; right: 75px; background: #333; color: white; padding: 6px 12px; border-radius: 4px;
+      position: absolute; right: 70px; background: #333; color: white; padding: 6px 12px; border-radius: 4px;
       font-size: 0.85rem; white-space: nowrap; opacity: 0; transition: opacity 0.3s; pointer-events: none;
     }
     .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
 
     /* Hero Section */
     .hero { 
-      background: linear-gradient(rgba(0, 91, 150, 0.85), rgba(0, 91, 150, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center; 
-      background-size: cover; color: white; text-align: center; padding: 100px 20px; 
+      background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 91, 150, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center; 
+      background-size: cover; color: white; text-align: center; padding: 120px 20px; 
     }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 16px; max-width: 800px; margin-left: auto; margin-right: auto; }
-    .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; }
-    .hero .company-badge { background: rgba(255, 215, 0, 0.2); border: 1px solid var(--gold); color: var(--gold); padding: 5px 15px; border-radius: 20px; font-weight: 600; display: inline-block; margin-bottom: 20px; font-size: 0.9rem; }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.2; }
+    .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+    .hero .company-badge { background: rgba(212, 175, 55, 0.2); border: 1px solid var(--gold); color: var(--gold); padding: 6px 16px; border-radius: 20px; font-weight: 600; display: inline-block; margin-bottom: 20px; font-size: 0.9rem; letter-spacing: 1px; }
 
     /* Sections */
-    section { padding: 60px 0; }
-    .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: var(--primary-blue); }
+    section { padding: 70px 0; }
+    .section-title { text-align: center; margin-bottom: 40px; font-size: 2.2rem; color: var(--primary-blue); }
     
     /* Services & Projects Grid */
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-    .service-card { background: var(--white); padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .service-card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; border-top: 4px solid var(--primary-blue); }
     .service-card:hover { transform: translateY(-5px); }
-    .service-card h3 { margin-top: 10px; font-size: 1.25rem; color: var(--primary-blue); }
+    .service-card h3 { margin-top: 15px; font-size: 1.3rem; color: var(--dark-blue); }
     .service-card ul { list-style: none; margin: 15px 0; }
-    .service-card li { padding: 8px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start; }
+    .service-card li { padding: 8px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start; font-size: 0.95rem; }
     .service-card li:before { content: "✓"; color: var(--secondary-green); font-weight: bold; margin-right: 10px; flex-shrink: 0; }
 
     /* Features */
     .features { background-color: var(--light-gray); }
-    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
     .feature { display: flex; align-items: flex-start; gap: 15px; }
-    .feature-icon { background: var(--primary-blue); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem; }
+    .feature-icon { background: var(--primary-blue); color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem; }
 
-    /* Board of Directors Styles */
-    .board-section { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 60px 0; margin: 40px 0; }
+    /* Board of Directors */
+    .board-section { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 80px 0; margin: 40px 0; }
     .board-intro { text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.1rem; color: var(--dark-gray); }
-    .board-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px; }
+    .board-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
     .board-card {
-      background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column;
+      background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s; display: flex; flex-direction: column;
     }
-    .board-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+    .board-card:hover { transform: translateY(-8px); }
     .board-card.chairman { grid-column: 1 / -1; max-width: 500px; margin: 0 auto 40px; border: 3px solid var(--gold); }
-    .board-photo { width: 100%; height: 320px; object-fit: cover; object-position: top; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .board-photo { width: 100%; height: 320px; object-fit: cover; object-position: top; background-color: #cbd5e1; }
     .board-card.chairman .board-photo { height: 380px; }
     .board-info { padding: 25px; flex: 1; display: flex; flex-direction: column; }
     .board-position { display: inline-block; background: var(--primary-blue); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; align-self: flex-start; }
@@ -104,19 +109,16 @@
     .board-name { font-size: 1.4rem; font-weight: 700; color: var(--text); margin-bottom: 5px; }
     .board-title { font-size: 0.95rem; color: var(--primary-blue); font-weight: 600; margin-bottom: 15px; }
     .board-experience { font-size: 0.9rem; color: var(--dark-gray); line-height: 1.6; flex: 1; }
-    .board-experience strong { color: var(--text); }
     .board-qualifications { margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee; font-size: 0.85rem; color: var(--dark-gray); }
-    .board-qualifications strong { color: var(--primary-blue); }
 
-    /* Organogram Styles */
+    /* Organogram */
     .org-chart { display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 30px; }
     .org-tier { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; width: 100%; }
     .org-card { 
       background: white; border: 2px solid var(--primary-blue); border-radius: 8px; padding: 15px 20px; 
-      text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); min-width: 200px; max-width: 250px;
-      position: relative; transition: transform 0.3s;
+      text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); min-width: 200px; max-width: 250px; transition: transform 0.3s;
     }
-    .org-card:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+    .org-card:hover { transform: translateY(-3px); }
     .org-card.md { background: var(--primary-blue); color: white; border-color: var(--primary-blue); }
     .org-card.md h4 { color: white; }
     .org-card h4 { font-size: 1rem; color: var(--primary-blue); margin-bottom: 5px; }
@@ -127,70 +129,67 @@
     /* Contact Form */
     .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .form-group { margin-bottom: 15px; }
-    .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Lato', sans-serif; }
-    .contact-info { background: var(--light-gray); padding: 25px; border-radius: 8px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Lato', sans-serif; font-size: 1rem; }
+    .contact-info { background: var(--light-gray); padding: 30px; border-radius: 8px; }
     
-    /* PERFECTLY ALIGNED CONTACT INFO (FIXED) */
-    .contact-item { 
-      display: flex; 
-      align-items: flex-start; 
-      gap: 12px; 
-      margin: 12px 0; 
-    }
-    .contact-icon { 
-      width: 20px; 
-      height: 20px; 
-      flex-shrink: 0; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      color: var(--primary-blue); 
-      margin-top: 3px; /* Aligns perfectly with the first line of text */
-    }
+    /* PERFECTLY ALIGNED CONTACT INFO */
+    .contact-item { display: flex; align-items: flex-start; gap: 15px; margin: 15px 0; }
+    .contact-icon { width: 24px; height: 24px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: var(--primary-blue); margin-top: 2px; }
     .contact-icon svg { width: 100%; height: 100%; fill: currentColor; }
     .contact-text { flex: 1; font-size: 1rem; line-height: 1.5; }
     .contact-text a { color: var(--primary-blue); text-decoration: none; }
     .contact-text a:hover { text-decoration: underline; }
     .whatsapp-link { color: var(--whatsapp-green) !important; font-weight: bold; display: inline-flex; align-items: center; gap: 5px; margin-left: 10px; }
-    .guarantee { background: #e8f5e9; padding: 15px; border-radius: 6px; text-align: center; font-weight: 600; color: var(--secondary-green); margin-top: 20px; }
 
-    /* Footer */
-    footer { background: var(--primary-blue); color: white; padding: 40px 0 20px; margin-top: 40px; }
-    .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding-bottom: 25px; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.15); }
-    .footer-brand { text-decoration: none; display: flex; flex-direction: column; line-height: 1.1; }
-    .footer-brand-name { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.8rem; color: white; letter-spacing: 1px; }
-    .footer-brand-sub { font-size: 0.8rem; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
-    .footer-nav { display: flex; flex-wrap: wrap; gap: 25px; }
-    .footer-nav a { color: #e0e0e0; text-decoration: none; font-weight: 600; transition: color 0.3s; }
-    .footer-nav a:hover { color: white; }
-    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 30px; text-align: left; }
-    .footer-section h3 { color: white; margin-bottom: 15px; font-size: 1.1rem; }
-    .footer-section p, .footer-section a { color: #e0e0e0; text-decoration: none; display: block; margin: 8px 0; font-size: 0.95rem; transition: color 0.3s; }
-    .footer-section a:hover { color: white; }
-    .footer-subscribe { margin-bottom: 30px; }
-    .footer-subscribe h3 { color: white; font-size: 1.1rem; margin-bottom: 12px; }
-    .subscribe-form { display: flex; max-width: 360px; background: white; border-radius: 4px; overflow: hidden; }
-    .subscribe-form input[type="email"] { flex: 1; border: none; padding: 12px 15px; font-size: 0.85rem; letter-spacing: 1px; outline: none; font-family: inherit; min-width: 0; }
-    .subscribe-form button { border: none; background: white; color: var(--primary-blue); padding: 0 15px; cursor: pointer; display: flex; align-items: center; }
-    .subscribe-form button svg { width: 20px; height: 20px; fill: currentColor; }
-    .subscribe-form button:hover { color: var(--secondary-green); }
-    .subscribe-note { font-size: 0.85rem; color: #e0e0e0; margin-top: 10px; }
-    .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px; font-size: 0.85rem; color: #e0e0e0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
-    .footer-legal { display: flex; gap: 20px; }
-    .footer-legal a { color: #e0e0e0; text-decoration: none; }
-    .footer-legal a:hover { color: white; text-decoration: underline; }
-    .footer-social { display: flex; gap: 12px; }
-    .footer-social a { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: white; transition: background 0.3s; }
-    .footer-social a:hover { background: var(--secondary-green); }
-    .footer-social svg { width: 16px; height: 16px; fill: currentColor; }
-    .footer-social i { font-size: 15px; }
-    .footer-about { max-width: 640px; color: #e0e0e0; line-height: 1.8; margin-bottom: 30px; }
-    .footer-tagline { width: 100%; text-align: center; font-size: 0.85rem; color: #e0e0e0; margin-top: 5px; }
-    .legal-page { max-width: 850px; }
-    .legal-page h3 { color: var(--primary-blue); margin-top: 25px; }
-    .legal-page a { color: var(--primary-blue); }
+    /* IVANHOE-STYLE FOOTER */
+    footer { background-color: var(--footer-bg); color: var(--footer-text); padding: 80px 0 0; font-size: 0.95rem; }
+    .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 40px; margin-bottom: 40px; }
+    .footer-col h4 { color: white; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 25px; font-weight: 600; }
+    .footer-col p { margin-bottom: 20px; line-height: 1.7; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a { color: var(--footer-text); text-decoration: none; transition: color 0.3s; display: flex; align-items: center; gap: 8px; }
+    .footer-col ul li a:hover { color: white; }
+    .footer-col ul li a::before { content: "›"; color: var(--gold); font-weight: bold; font-size: 1.2rem; line-height: 1; }
+    .footer-logo { margin-bottom: 20px; }
+    .footer-logo svg { height: 50px; width: auto; }
+    .footer-socials { display: flex; gap: 15px; margin-top: 20px; }
+    .footer-socials a { color: white; background: rgba(255,255,255,0.1); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.3s; text-decoration: none; }
+    .footer-socials a:hover { background: var(--primary-blue); }
+    
+    /* SUBSCRIBE SECTION */
+    .footer-subscribe {
+      background: rgba(255,255,255,0.05);
+      padding: 40px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+    .footer-subscribe-text { flex: 1; min-width: 250px; }
+    .footer-subscribe-text h4 { color: white; font-size: 1.3rem; margin-bottom: 8px; }
+    .footer-subscribe-text p { color: var(--footer-text); font-size: 0.9rem; margin: 0; }
+    .footer-subscribe-form { display: flex; gap: 10px; flex: 1; max-width: 450px; min-width: 250px; }
+    .footer-subscribe-form input {
+      flex: 1; padding: 12px 15px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2);
+      color: white; border-radius: 4px; font-family: 'Lato', sans-serif; font-size: 0.95rem;
+    }
+    .footer-subscribe-form input::placeholder { color: #a0aec0; }
+    .footer-subscribe-form input:focus { outline: none; border-color: var(--primary-blue); }
+    .footer-subscribe-form button {
+      background: var(--primary-blue); color: white; border: none; padding: 0 20px; border-radius: 4px;
+      cursor: pointer; font-weight: 600; transition: background 0.3s; display: flex; align-items: center; gap: 8px;
+    }
+    .footer-subscribe-form button:hover { background: #004471; }
+
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 25px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; font-size: 0.85rem; }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { color: var(--footer-text); text-decoration: none; transition: color 0.3s; }
+    .footer-bottom-links a:hover { color: white; }
 
     /* Page Navigation */
     .page { display: none; }
@@ -200,18 +199,24 @@
     /* Mobile menu */
     .menu-toggle { display: none; flex-direction: column; cursor: pointer; padding: 10px; }
     .bar { width: 25px; height: 3px; background: var(--primary-blue); margin: 3px 0; }
-    .mobile-menu { display: none; position: absolute; top: 85px; left: 0; width: 100%; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 99; }
+    .mobile-menu { display: none; position: absolute; top: 80px; left: 0; width: 100%; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 99; }
     .mobile-menu a { display: block; padding: 15px; text-align: center; text-decoration: none; color: var(--dark-gray); border-bottom: 1px solid #eee; font-weight: 600; }
-    .mobile-menu a:hover { background: var(--light-gray); color: var(--primary-blue); }
 
+    @media (max-width: 992px) {
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .menu-toggle { display: flex; }
       .contact-container { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 1.8rem; }
-      .hero { padding: 60px 20px; }
+      .hero h1 { font-size: 2rem; }
+      .hero { padding: 80px 20px; }
       .org-tier { flex-direction: column; align-items: center; }
       .board-card.chairman { max-width: 100%; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-subscribe { flex-direction: column; text-align: center; padding: 30px 20px; }
+      .footer-subscribe-form { width: 100%; max-width: 100%; }
+      .footer-bottom { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
@@ -222,28 +227,12 @@
     <div class="container">
       <nav>
         <a href="#" class="logo" data-page="home">
-          <!-- PROPER INDUSTRIAL GEAR LOGO WITH GAPS -->
           <svg viewBox="0 0 500 160" xmlns="http://www.w3.org/2000/svg">
             <g transform="translate(70, 80)">
               <g fill="#6B6B6B">
-                <rect x="-6" y="-65" width="12" height="15" rx="2"/>
-                <rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(30)"/>
-                <rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(60)"/>
-                <rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(90)"/>
-                <rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(120)"/>
-                <rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(150)"/>
-                <rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(180)"/>
-                <rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(210)"/>
-                <rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(240)"/>
-                <rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(270)"/>
-                <rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(300)"/>
-                <rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(330)"/>
+                <rect x="-6" y="-65" width="12" height="15" rx="2"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(30)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(60)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(90)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(120)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(150)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(180)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(210)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(240)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(270)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(300)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(330)"/>
               </g>
-              <circle cx="0" cy="0" r="55" fill="#8B8B8B"/>
-              <circle cx="0" cy="0" r="40" fill="#FFFFFF"/>
-              <circle cx="0" cy="0" r="40" fill="none" stroke="#8B8B8B" stroke-width="12" stroke-dasharray="20 15"/>
-              <circle cx="0" cy="0" r="20" fill="#6B6B6B"/>
-              <circle cx="0" cy="0" r="8" fill="#FFFFFF"/>
+              <circle cx="0" cy="0" r="55" fill="#8B8B8B"/><circle cx="0" cy="0" r="40" fill="#FFFFFF"/><circle cx="0" cy="0" r="40" fill="none" stroke="#8B8B8B" stroke-width="12" stroke-dasharray="20 15"/><circle cx="0" cy="0" r="20" fill="#6B6B6B"/><circle cx="0" cy="0" r="8" fill="#FFFFFF"/>
             </g>
             <text x="280" y="85" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="bold" fill="#000000" letter-spacing="2" text-anchor="middle">MALECOMBO</text>
             <text x="280" y="120" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#5DADE2" letter-spacing="4" text-anchor="middle">TRADING ENTERPRISE CC</text>
@@ -269,8 +258,7 @@
       </div>
     </div>
     
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/27788195158?text=Hello%20Malecombo,%20I%20would%20like%20to%20enquire%20about%20your%20construction%20and%20mining%20services." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/27788195158?text=Hello%20Malecombo,%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
       <span class="whatsapp-tooltip">Chat on WhatsApp</span>
       <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958C9.72 31.016 12.742 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.32 22.616c-.388 1.096-1.932 2.008-3.176 2.272-.852.18-1.964.324-5.708-1.224-4.796-1.984-7.884-6.84-8.124-7.156-.232-.316-1.932-2.572-1.932-4.904s1.224-3.472 1.66-3.948c.436-.476.952-.592 1.268-.592.316 0 .632.004.908.016.292.012.68-.11 1.064.812.388.936 1.324 3.228 1.44 3.464.116.236.196.512.04.828-.156.316-.236.512-.472.788-.236.276-.496.616-.708.828-.236.236-.484.492-.208.968.276.476 1.228 2.024 2.632 3.272 1.812 1.612 3.34 2.112 3.816 2.348.476.236.752.196 1.028-.116.276-.316 1.188-1.384 1.504-1.86.316-.476.632-.396 1.068-.236.436.156 2.756 1.3 3.232 1.536.476.236.792.356.908.552.116.196.116 1.128-.272 2.224z"/></svg>
     </a>
@@ -280,7 +268,7 @@
   <div id="home" class="page active">
     <section class="hero">
       <div class="container">
-        <span class="company-badge">100% Black Owned | B-BBEE Compliant</span>
+        <span class="company-badge">100% BLACK OWNED | B-BBEE COMPLIANT</span>
         <h1>Quality Construction & Civil Works for Mining and Infrastructure Projects</h1>
         <p>Providing expert construction and civil engineering services across Limpopo and Mpumalanga since 2011. Delivering safety, quality, and transformation on every project.</p>
         <a href="#" class="btn" data-page="contact">Get a Project Quote</a>
@@ -332,21 +320,23 @@
         <div class="features-grid">
           <div class="feature"><div class="feature-icon">✅</div><div><strong>Proven Expertise</strong> – 10+ years of experience in mining and construction projects across Limpopo and Mpumalanga.</div></div>
           <div class="feature"><div class="feature-icon">🏆</div><div><strong>Quality Assurance</strong> – Rigorous quality control systems ensuring compliance with all specifications.</div></div>
-          <div class="feature"><div class="feature-icon">👷</div><div><strong>Skilled Workforce</strong> – Experienced personnel with specialized skills in mining infrastructure.</div></div>
-          <div class="feature"><div class="feature-icon"></div><div><strong>Community Focus</strong> – Committed to local employment, skills development, and transformation.</div></div>
-          <div class="feature"><div class="feature-icon">🛡️</div><div><strong>Safety First</strong> – Zero harm approach to all operations, meeting Anglo American's SHEQ standards.</div></div>
-          <div class="feature"><div class="feature-icon"></div><div><strong>Project Excellence</strong> – On-time, on-budget delivery with meticulous attention to detail.</div></div>
+          <div class="feature"><div class="feature-icon"></div><div><strong>Skilled Workforce</strong> – Experienced personnel with specialized skills in mining infrastructure.</div></div>
+          <div class="feature"><div class="feature-icon">🤝</div><div><strong>Community Focus</strong> – Committed to local employment, skills development, and transformation.</div></div>
+          <div class="feature"><div class="feature-icon">️</div><div><strong>Safety First</strong> – Zero harm approach to all operations, meeting Anglo American's SHEQ standards.</div></div>
+          <div class="feature"><div class="feature-icon">📊</div><div><strong>Project Excellence</strong> – On-time, on-budget delivery with meticulous attention to detail.</div></div>
         </div>
       </div>
     </section>
 
-    <section class="container" style="text-align: center; background: var(--light-gray); padding: 40px 20px; border-radius: 8px;">
+    <section class="container" style="text-align: center; background: var(--light-gray); padding: 50px 20px; border-radius: 8px;">
       <h2>Ready to Start Your Construction Project?</h2>
-      <p>Get a free project assessment and quotation today.</p>
-      <p style="margin: 20px 0;">
-        📞 <strong>Call:</strong> 078 819 5158/ 063 516 0456<br>
-        ✉️ <strong>Email:</strong> malecombop@gmail.com<br>
-        📍 <strong>Business Address:</strong> 92 Koranna Avenue, Doringkloof, Centurion, 0157
+      <p style="margin: 15px 0;">Get a free project assessment and quotation today.</p>
+      <p style="margin: 20px 0; font-size: 1.1rem;">
+        📞 <strong>Call:</strong> 078 819 5158 / 063 516 0456<br>
+        ✉️ <strong>Email:</strong> malecombop@gmail.com
+      </p>
+      <p style="margin-bottom: 25px; font-size: 1rem;">
+         <strong>Business Address:</strong> 92 Koranna Avenue, Doringkloof, Centurion, 0157
       </p>
       <a href="#" class="btn" data-page="contact">Request Project Quote</a>
     </section>
@@ -358,11 +348,11 @@
       <h2 class="section-title">About Malecombo Trading Enterprise CC</h2>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;">
         <div>
-          <h3 id="company-overview">Company Overview</h3>
+          <h3>Company Overview</h3>
           <p>Malecombo Trading Enterprise CC was registered as a Close Corporation on 03 May 2011. The company is a multi-disciplinary business entity that has progressively positioned itself in the local, provincial, and national trading landscape within the mining, construction, and civil works sectors.</p>
           <p>As an equal opportunity, 100% Black-owned enterprise with full interest holding, we were established to address the overall needs of the mining industry, building and construction, and civil engineering — delivering quality, safety, and transformation across all our projects.</p>
           
-          <h3 id="vision-mission" style="margin-top: 30px;">Our Vision</h3>
+          <h3 style="margin-top: 30px;">Our Vision</h3>
           <p>To design and implement modern infrastructure through data-driven construction in the Mining Industry and other sectors, becoming a recognised leader in mining civil and construction support services in South Africa.</p>
           
           <h3 style="margin-top: 30px;">Our Mission</h3>
@@ -382,195 +372,106 @@
               <li><strong>Concentrator Plant Operations:</strong> Direct experience in unblocking process pipework, unchoking screeners, maintaining conveyor belt systems, and collecting process samples.</li>
             </ul>
           </div>
-          
-          <h3 id="core-values">Core Values</h3>
-          <ul style="margin: 20px 0; padding-left: 20px;">
-            <li>Best business practice and principles</li>
-            <li>Safety — zero harm to people and the environment</li>
-            <li>Discipline and accountability</li>
-            <li>Loyalty to clients, employees, and communities</li>
-            <li>Productive behaviour and continuous improvement</li>
-            <li>Trust and integrity in all dealings</li>
-          </ul>
         </div>
       </div>
 
-      <!-- BOARD OF DIRECTORS SECTION -->
-      <section class="board-section" id="board-of-directors" style="margin: 60px -5%; padding: 60px 5%;">
+      <!-- BOARD OF DIRECTORS -->
+      <section class="board-section" style="margin: 60px -5%; padding: 60px 5%;">
         <h2 class="section-title">Board of Directors</h2>
-        <p class="board-intro">Our Board brings together decades of combined experience in mining, construction, finance, law, and sustainable development. Together, they provide strategic oversight and governance to ensure Malecombo continues to deliver excellence while driving transformation in the communities we serve.</p>
+        <p class="board-intro">Our Board brings together decades of combined experience in mining, construction, finance, law, and sustainable development. Together, they provide strategic oversight and governance to ensure Malecombo continues to deliver excellence.</p>
         
         <div class="board-grid">
-          <!-- CHAIRMAN -->
           <div class="board-card chairman">
-            <img src="images/board-chairman.svg" alt="Mr. Johannes Mphahlele - Board Chairman" class="board-photo" loading="lazy">
+            <img src="images/board-chairman.jpg" alt="Mr. Johannes Mphahlele" class="board-photo" onerror="this.style.display='none'">
             <div class="board-info">
               <span class="board-position">Board Chairman</span>
               <h3 class="board-name">Mr. Johannes Mphahlele</h3>
               <div class="board-title">Non-Executive Chairman</div>
               <div class="board-experience">
                 <p>Mr. Mphahlele is a distinguished industry veteran with over <strong>35 years of experience</strong> in the South African mining and construction sectors. He has served on the boards of several JSE-listed mining companies and has been instrumental in driving transformation and B-BBEE compliance across the industry.</p>
-                <p style="margin-top: 10px;">His strategic vision and governance expertise have guided Malecombo's growth from a small local contractor to a respected multi-disciplinary enterprise serving major mining houses including Anglo American Platinum and Ivanplats.</p>
               </div>
-              <div class="board-qualifications">
-                <strong>Qualifications:</strong> BCom (Hons), MBA, Certified Director (IoDSA)<br>
-                <strong>Experience:</strong> 35+ years in mining & construction governance
-              </div>
+              <div class="board-qualifications"><strong>Qualifications:</strong> BCom (Hons), MBA, Certified Director (IoDSA)</div>
             </div>
           </div>
-
-          <!-- CEO -->
           <div class="board-card">
-            <img src="images/board-ceo.svg" alt="Ms. Thandiwe Mokoena - Chief Executive Officer" class="board-photo" loading="lazy">
+            <img src="images/board-ceo.jpg" alt="Ms. Thandiwe Mokoena" class="board-photo" onerror="this.style.display='none'">
             <div class="board-info">
               <span class="board-position">Chief Executive Officer</span>
               <h3 class="board-name">Ms. Thandiwe Mokoena</h3>
               <div class="board-title">Chief Executive Officer</div>
               <div class="board-experience">
-                <p>Ms. Mokoena brings <strong>18 years of executive leadership experience</strong> in the construction and infrastructure development sector. She has successfully managed portfolios exceeding R500 million and led teams of over 200 professionals across multiple provinces.</p>
-                <p style="margin-top: 10px;">Her expertise spans strategic business development, client relationship management, and operational excellence. Under her leadership, Malecombo has expanded its service offerings and secured contracts with major mining and government clients.</p>
+                <p>Ms. Mokoena brings <strong>18 years of executive leadership experience</strong> in the construction and infrastructure development sector. She has successfully managed portfolios exceeding R500 million and led teams of over 200 professionals.</p>
               </div>
-              <div class="board-qualifications">
-                <strong>Qualifications:</strong> BEng Civil, MBL, Pr.Eng (ECSA)<br>
-                <strong>Experience:</strong> 18 years in construction executive leadership
-              </div>
+              <div class="board-qualifications"><strong>Qualifications:</strong> BEng Civil, MBL, Pr.Eng (ECSA)</div>
             </div>
           </div>
-
-          <!-- CFO -->
           <div class="board-card">
-            <img src="images/board-finance.svg" alt="Mr. Sipho Ndlovu - Chief Financial Officer" class="board-photo" loading="lazy">
+            <img src="images/board-finance.jpg" alt="Mr. Sipho Ndlovu" class="board-photo" onerror="this.style.display='none'">
             <div class="board-info">
               <span class="board-position">Chief Financial Officer</span>
               <h3 class="board-name">Mr. Sipho Ndlovu</h3>
               <div class="board-title">Chief Financial Officer</div>
               <div class="board-experience">
-                <p>Mr. Ndlovu is a seasoned financial executive with <strong>15 years of experience</strong> in corporate finance, treasury management, and financial strategy within the mining and construction industries. He has managed financial portfolios exceeding R300 million.</p>
-                <p style="margin-top: 10px;">His expertise includes financial planning and analysis, risk management, tax compliance, and investor relations. He ensures Malecombo maintains strong financial health and sustainable growth trajectories.</p>
+                <p>Mr. Ndlovu is a seasoned financial executive with <strong>15 years of experience</strong> in corporate finance, treasury management, and financial strategy within the mining and construction industries.</p>
               </div>
-              <div class="board-qualifications">
-                <strong>Qualifications:</strong> BCom Accounting, CA(SA), MBA<br>
-                <strong>Experience:</strong> 15 years in corporate finance & treasury
-              </div>
+              <div class="board-qualifications"><strong>Qualifications:</strong> BCom Accounting, CA(SA), MBA</div>
             </div>
           </div>
-
-          <!-- LEGAL -->
           <div class="board-card">
-            <img src="images/board-legal.svg" alt="Ms. Naledi Khumalo - Chief Legal Officer" class="board-photo" loading="lazy">
+            <img src="images/board-legal.jpg" alt="Ms. Naledi Khumalo" class="board-photo" onerror="this.style.display='none'">
             <div class="board-info">
               <span class="board-position">Chief Legal Officer</span>
               <h3 class="board-name">Ms. Naledi Khumalo</h3>
               <div class="board-title">Chief Legal & Compliance Officer</div>
               <div class="board-experience">
                 <p>Ms. Khumalo is an accomplished legal professional with <strong>12 years of experience</strong> in corporate law, contract management, and regulatory compliance within the mining, construction, and energy sectors.</p>
-                <p style="margin-top: 10px;">She oversees all legal matters including contract negotiation, dispute resolution, regulatory compliance (MHSA, OHSA, CIDB), and corporate governance. Her expertise ensures Malecombo operates within all legal frameworks while protecting the company's interests.</p>
               </div>
-              <div class="board-qualifications">
-                <strong>Qualifications:</strong> LLB, LLM (Corporate Law), Admitted Attorney<br>
-                <strong>Experience:</strong> 12 years in corporate & mining law
-              </div>
+              <div class="board-qualifications"><strong>Qualifications:</strong> LLB, LLM (Corporate Law), Admitted Attorney</div>
             </div>
           </div>
-
-          <!-- SUSTAINABILITY -->
           <div class="board-card">
-            <img src="images/board-sustainability.svg" alt="Ms. Zanele Dlamini - Chief Sustainability Officer" class="board-photo" loading="lazy">
+            <img src="images/board-sustainability.jpg" alt="Ms. Zanele Dlamini" class="board-photo" onerror="this.style.display='none'">
             <div class="board-info">
               <span class="board-position">Chief Sustainability Officer</span>
               <h3 class="board-name">Ms. Zanele Dlamini</h3>
               <div class="board-title">Chief Sustainability & Transformation Officer</div>
               <div class="board-experience">
-                <p>Ms. Dlamini is a passionate sustainability leader with <strong>14 years of experience</strong> in B-BBEE strategy, ESG (Environmental, Social, and Governance) implementation, and community development within the mining and construction sectors.</p>
-                <p style="margin-top: 10px;">She drives Malecombo's transformation agenda, ensuring compliance with the Mining Charter and Construction Sector Charter. Her work includes local procurement strategies, skills development programs, and community empowerment initiatives that create lasting impact in Limpopo and Mpumalanga.</p>
+                <p>Ms. Dlamini is a passionate sustainability leader with <strong>14 years of experience</strong> in B-BBEE strategy, ESG implementation, and community development within the mining and construction sectors.</p>
               </div>
-              <div class="board-qualifications">
-                <strong>Qualifications:</strong> BCom, MPhil (Sustainable Development), B-BBEE Professional<br>
-                <strong>Experience:</strong> 14 years in sustainability & transformation
-              </div>
+              <div class="board-qualifications"><strong>Qualifications:</strong> BCom, MPhil (Sustainable Development)</div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ORGANIZATIONAL STRUCTURE -->
-      <h3 id="organizational-structure" style="text-align: center; margin: 50px 0 20px;">Organizational Structure</h3>
+      <h3 style="text-align: center; margin: 50px 0 20px;">Organizational Structure</h3>
       <div class="org-chart">
+        <div class="org-tier"><div class="org-card md" style="background: var(--gold); border-color: var(--gold);"><h4 style="color: #000;">Board of Directors</h4><p style="color: #333;">Strategic Oversight & Governance</p></div></div>
+        <div class="org-connector"></div>
+        <div class="org-tier"><div class="org-card md"><h4>Managing Director</h4><p>Elias Malose Bambo</p></div></div>
+        <div class="org-connector"></div>
         <div class="org-tier">
-          <div class="org-card md" style="background: var(--gold); border-color: var(--gold);">
-            <h4 style="color: #000;">Board of Directors</h4>
-            <p style="color: #333;">Strategic Oversight & Governance</p>
-          </div>
+          <div class="org-card"><h4>Administrative Manager</h4><p>Operations, HR & Compliance</p></div>
+          <div class="org-card"><h4>Quality Engineer</h4><p>QMS, Inspections & Audits</p></div>
+          <div class="org-card"><h4>Site Manager</h4><p>Technical Oversight & QC</p></div>
+          <div class="org-card"><h4>Health & Safety Officer</h4><p>OHSA/MHSA Compliance</p></div>
         </div>
         <div class="org-connector"></div>
-        
         <div class="org-tier">
-          <div class="org-card md">
-            <h4>Managing Director</h4>
-            <p>Elias Malose Bambo</p>
-          </div>
-        </div>
-        <div class="org-connector"></div>
-        
-        <div class="org-tier">
-          <div class="org-card">
-            <h4>Administrative Manager</h4>
-            <p>Operations, HR & Compliance</p>
-          </div>
-          <div class="org-card">
-            <h4>Quality Engineer</h4>
-            <p>QMS, Inspections & Audits</p>
-          </div>
-          <div class="org-card">
-            <h4>Site Manager</h4>
-            <p>Technical Oversight & QC</p>
-          </div>
-          <div class="org-card">
-            <h4>Health & Safety Officer</h4>
-            <p>OHSA/MHSA Compliance</p>
-          </div>
-        </div>
-        <div class="org-connector"></div>
-        
-        <div class="org-tier">
-          <div class="org-card">
-            <h4>Driver / Logistics</h4>
-            <p>Transport & Deliveries</p>
-          </div>
-          <div class="org-card">
-            <h4>General Workers</h4>
-            <p>Skilled & Manual Labour</p>
-          </div>
+          <div class="org-card"><h4>Driver / Logistics</h4><p>Transport & Deliveries</p></div>
+          <div class="org-card"><h4>General Workers</h4><p>Skilled & Manual Labour</p></div>
         </div>
       </div>
       
-      <h3 id="compliance" style="text-align: center; margin: 50px 0 20px;">Compliance & Statutory Information</h3>
+      <h3 style="text-align: center; margin: 50px 0 20px;">Compliance & Statutory Information</h3>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px;">
-        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-          <div style="font-weight: bold; color: var(--primary-blue);">Company Registration</div>
-          <div>2011/066408/23 (Active)</div>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-          <div style="font-weight: bold; color: var(--primary-blue);">SARS Tax Clearance</div>
-          <div>Good Standing - Current</div>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-          <div style="font-weight: bold; color: var(--primary-blue);">B-BBEE Status</div>
-          <div>100% Black Owned</div>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-          <div style="font-weight: bold; color: var(--primary-blue);">CIDB Registration</div>
-          <div>Registered</div>
-        </div>
-        <!-- COID CHANGED TO COIDA -->
-        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-          <div style="font-weight: bold; color: var(--primary-blue);">COIDA</div>
-          <div>Letter of Good Standing</div>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-          <div style="font-weight: bold; color: var(--primary-blue);">ISO 9001:2015</div>
-          <div>In Process</div>
-        </div>
+        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);"><div style="font-weight: bold; color: var(--primary-blue);">Company Registration</div><div>2011/066408/23 (Active)</div></div>
+        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);"><div style="font-weight: bold; color: var(--primary-blue);">SARS Tax Clearance</div><div>Good Standing - Current</div></div>
+        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);"><div style="font-weight: bold; color: var(--primary-blue);">B-BBEE Status</div><div>100% Black Owned</div></div>
+        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);"><div style="font-weight: bold; color: var(--primary-blue);">CIDB Registration</div><div>Registered</div></div>
+        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);"><div style="font-weight: bold; color: var(--primary-blue);">COIDA</div><div>Letter of Good Standing</div></div>
+        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);"><div style="font-weight: bold; color: var(--primary-blue);">ISO 9001:2015</div><div>In Process</div></div>
       </div>
     </section>
   </div>
@@ -580,77 +481,12 @@
     <section class="container">
       <h2 class="section-title">Our Specialized Services</h2>
       <div class="services-grid">
-        <div class="service-card">
-          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🏗️</div>
-          <h3>Civil Engineering Construction</h3>
-          <ul>
-            <li>Routine road maintenance (signs, lay-byes, gabions, guardrails)</li>
-            <li>Emergency road repairs, fencing, and bush clearing</li>
-            <li>Road marking, paving, and road caps</li>
-            <li>Water reservoirs, sub-divisions, sewer systems, bridges, tunnels, and dams</li>
-            <li>V-drains, pre-cast elements, and stormwater structures</li>
-          </ul>
-        </div>
-        
-        <div class="service-card">
-          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🏢</div>
-          <h3>Commercial & Industrial Building</h3>
-          <ul>
-            <li>Construction and design of commercial malls and industrial facilities</li>
-            <li>Form-work and steel fixing / reinforcing (bar, mesh, post-tension)</li>
-            <li>Concrete mixing and pouring (mass and structural)</li>
-            <li>Steel structuring and boiler making</li>
-            <li>Scaffolding and shutter board supply / hire</li>
-          </ul>
-        </div>
-        
-        <div class="service-card">
-          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🏠</div>
-          <h3>Residential Building Construction</h3>
-          <ul>
-            <li>Grading, bulk earthworks, and excavation</li>
-            <li>Foundations, pest control, framing, and box cutting</li>
-            <li>Rough electrical wiring and rough plumbing</li>
-            <li>Brick laying, installation of windows and doors</li>
-            <li>Timber, steel, and thatch roofing; siding and plumbing</li>
-          </ul>
-        </div>
-        
-        <div class="service-card">
-          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">⛏️</div>
-          <h3>Mining & Industrial Civil Works</h3>
-          <ul>
-            <li>Form-work and steel fixing for mining concrete structures</li>
-            <li>Shaft development civil support and concrete shaft lining</li>
-            <li>Surface and underground piping installation and maintenance</li>
-            <li>Tailings storage facility (TSF) rehabilitation</li>
-            <li>Bulk earthworks, haul road construction, and security fencing (ClearVu/Razor wire)</li>
-          </ul>
-        </div>
-        
-        <div class="service-card">
-          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🔧</div>
-          <h3>Drill & Blast Support Services</h3>
-          <ul>
-            <li>Surface blast-hole drilling (large-diameter rotary drilling)</li>
-            <li>Drill pattern layout and hole positioning</li>
-            <li>Drill rig scheduling and dispatch coordination</li>
-            <li>Blasting supervision and compliance (Competent A)</li>
-            <li>Drill crew supervision and rock-type specific drilling knowledge</li>
-          </ul>
-        </div>
-        
-        <div class="service-card">
-          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🧹</div>
-          <h3>Plant Maintenance & Cleaning</h3>
-          <ul>
-            <li>Process pipe unblocking and screener unchoking</li>
-            <li>Conveyor belt attendance and maintenance support</li>
-            <li>Commercial and industrial cleaning services</li>
-            <li>Site clearing, waste management, and high-pressure water jetting</li>
-            <li>Plant shutdown and planned maintenance support</li>
-          </ul>
-        </div>
+        <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🏗️</div><h3>Civil Engineering Construction</h3><ul><li>Routine road maintenance (signs, lay-byes, gabions, guardrails)</li><li>Emergency road repairs, fencing, and bush clearing</li><li>Road marking, paving, and road caps</li><li>Water reservoirs, sub-divisions, sewer systems, bridges, tunnels, and dams</li><li>V-drains, pre-cast elements, and stormwater structures</li></ul></div>
+        <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;"></div><h3>Commercial & Industrial Building</h3><ul><li>Construction and design of commercial malls and industrial facilities</li><li>Form-work and steel fixing / reinforcing (bar, mesh, post-tension)</li><li>Concrete mixing and pouring (mass and structural)</li><li>Steel structuring and boiler making</li><li>Scaffolding and shutter board supply / hire</li></ul></div>
+        <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🏠</div><h3>Residential Building Construction</h3><ul><li>Grading, bulk earthworks, and excavation</li><li>Foundations, pest control, framing, and box cutting</li><li>Rough electrical wiring and rough plumbing</li><li>Brick laying, installation of windows and doors</li><li>Timber, steel, and thatch roofing; siding and plumbing</li></ul></div>
+        <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">⛏️</div><h3>Mining & Industrial Civil Works</h3><ul><li>Form-work and steel fixing for mining concrete structures</li><li>Shaft development civil support and concrete shaft lining</li><li>Surface and underground piping installation and maintenance</li><li>Tailings storage facility (TSF) rehabilitation</li><li>Bulk earthworks, haul road construction, and security fencing</li></ul></div>
+        <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;"></div><h3>Drill & Blast Support Services</h3><ul><li>Surface blast-hole drilling (large-diameter rotary drilling)</li><li>Drill pattern layout and hole positioning</li><li>Drill rig scheduling and dispatch coordination</li><li>Blasting supervision and compliance (Competent A)</li><li>Drill crew supervision and rock-type specific drilling knowledge</li></ul></div>
+        <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;"></div><h3>Plant Maintenance & Cleaning</h3><ul><li>Process pipe unblocking and screener unchoking</li><li>Conveyor belt attendance and maintenance support</li><li>Commercial and industrial cleaning services</li><li>Site clearing, waste management, and high-pressure water jetting</li><li>Plant shutdown and planned maintenance support</li></ul></div>
       </div>
     </section>
   </div>
@@ -661,42 +497,12 @@
       <h2 class="section-title">Our Completed Projects</h2>
       <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">See the quality of our work. We've successfully completed numerous projects across Limpopo and Mpumalanga.</p>
       <div class="services-grid">
-        <div class="service-card">
-          <h3>Ivanplats Platreef – Hitch Foundation Shaft 2</h3>
-          <p><strong>Client:</strong> Ivanplats (Pty) Ltd</p>
-          <p><strong>Location:</strong> Mokopane, Limpopo</p>
-          <p><strong>Scope:</strong> Form-work, steel fixing, reinforcing, and concrete works for Shaft 2 hitch foundation.</p>
-        </div>
-        <div class="service-card">
-          <h3>ClearVu & Razor Wire Security Fencing</h3>
-          <p><strong>Client:</strong> Anglo American Platinum (Mogalakwena Mine)</p>
-          <p><strong>Location:</strong> Mokopane, Limpopo</p>
-          <p><strong>Scope:</strong> Supply and installation of high-security panel fencing and razor wire perimeter security.</p>
-        </div>
-        <div class="service-card">
-          <h3>The Crossing Mall Parking Structure</h3>
-          <p><strong>Client:</strong> Commercial Client / Main Contractor</p>
-          <p><strong>Location:</strong> Mokopane, Limpopo</p>
-          <p><strong>Scope:</strong> Steel fixing, reinforcing, form-work, and concrete works for multi-level parking structure.</p>
-        </div>
-        <div class="service-card">
-          <h3>Nkakabidi High School</h3>
-          <p><strong>Client:</strong> Department of Education</p>
-          <p><strong>Location:</strong> Sekgakgapeng, Limpopo</p>
-          <p><strong>Scope:</strong> Full building construction including foundations, brick laying, roofing, windows, doors, and finishing.</p>
-        </div>
-        <div class="service-card">
-          <h3>Radingwana & Pienaars River Bridges</h3>
-          <p><strong>Client:</strong> RSC Mpumalanga</p>
-          <p><strong>Location:</strong> Limpopo / Gauteng border</p>
-          <p><strong>Scope:</strong> Material supply and construction support for bridge infrastructure projects.</p>
-        </div>
-        <div class="service-card">
-          <h3>Basilread Pipeline – Olifants River</h3>
-          <p><strong>Client:</strong> RSC Burgersfort</p>
-          <p><strong>Location:</strong> Burgersfort / Steelpoort</p>
-          <p><strong>Scope:</strong> Supply and logistics support for pipeline installation on the Olifants River.</p>
-        </div>
+        <div class="service-card"><h3>Ivanplats Platreef – Hitch Foundation Shaft 2</h3><p><strong>Client:</strong> Ivanplats (Pty) Ltd</p><p><strong>Location:</strong> Mokopane, Limpopo</p><p><strong>Scope:</strong> Form-work, steel fixing, reinforcing, and concrete works for Shaft 2 hitch foundation.</p></div>
+        <div class="service-card"><h3>ClearVu & Razor Wire Security Fencing</h3><p><strong>Client:</strong> Anglo American Platinum (Mogalakwena Mine)</p><p><strong>Location:</strong> Mokopane, Limpopo</p><p><strong>Scope:</strong> Supply and installation of high-security panel fencing and razor wire perimeter security.</p></div>
+        <div class="service-card"><h3>The Crossing Mall Parking Structure</h3><p><strong>Client:</strong> Commercial Client / Main Contractor</p><p><strong>Location:</strong> Mokopane, Limpopo</p><p><strong>Scope:</strong> Steel fixing, reinforcing, form-work, and concrete works for multi-level parking structure.</p></div>
+        <div class="service-card"><h3>Nkakabidi High School</h3><p><strong>Client:</strong> Department of Education</p><p><strong>Location:</strong> Sekgakgapeng, Limpopo</p><p><strong>Scope:</strong> Full building construction including foundations, brick laying, roofing, windows, doors, and finishing.</p></div>
+        <div class="service-card"><h3>Radingwana & Pienaars River Bridges</h3><p><strong>Client:</strong> RSC Mpumalanga</p><p><strong>Location:</strong> Limpopo / Gauteng border</p><p><strong>Scope:</strong> Material supply and construction support for bridge infrastructure projects.</p></div>
+        <div class="service-card"><h3>Basilread Pipeline – Olifants River</h3><p><strong>Client:</strong> RSC Burgersfort</p><p><strong>Location:</strong> Burgersfort / Steelpoort</p><p><strong>Scope:</strong> Supply and logistics support for pipeline installation on the Olifants River.</p></div>
       </div>
     </section>
   </div>
@@ -708,25 +514,12 @@
       <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">Get in touch with us today for a free project assessment and quotation.</p>
 
       <div class="contact-container">
-        <!-- FORMSPREE INTEGRATION -->
         <form id="contactForm" action="https://formspree.io/f/xgvrqzgk" method="POST">
           <input type="hidden" name="_subject" value="New Malecombo Project Quote Request">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="company">Company Name (if applicable)</label>
-            <input type="text" id="company" name="company">
-          </div>
+          <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" required></div>
+          <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" required></div>
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+          <div class="form-group"><label for="company">Company Name (if applicable)</label><input type="text" id="company" name="company"></div>
           <div class="form-group">
             <label for="projectType">Project Type</label>
             <select id="projectType" name="project_type" required>
@@ -739,10 +532,7 @@
               <option value="other">Other</option>
             </select>
           </div>
-          <div class="form-group">
-            <label for="message">Project Details</label>
-            <textarea id="message" name="message" rows="4" placeholder="Please describe your project requirements, location, and timeline..."></textarea>
-          </div>
+          <div class="form-group"><label for="message">Project Details</label><textarea id="message" name="message" rows="4" placeholder="Please describe your project requirements, location, and timeline..."></textarea></div>
           <button type="submit" class="btn" style="width: 100%;">Request Project Quote</button>
         </form>
 
@@ -752,332 +542,158 @@
           <p><strong>Registration Number:</strong> 2011/066408/23</p>
           <p><strong>VAT Number:</strong> 4090296379</p>
           
-          <!-- PERFECTLY ALIGNED CONTACT DETAILS WITH SVG ICONS -->
           <h3 style="margin-top: 25px;">Contact Details</h3>
-          
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            </div>
-            <div class="contact-text">
-              <strong>Primary:</strong> <a href="tel:0788195158">078 819 5158</a> 
-              <a href="https://wa.me/27788195158?text=Hello%20Malecombo,%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="whatsapp-link">💬 WhatsApp</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            </div>
-            <div class="contact-text">
-              <strong>Secondary:</strong> <a href="tel:0635160456">063 516 0456</a> 
-              <a href="https://wa.me/27635160456?text=Hello%20Malecombo,%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="whatsapp-link">💬 WhatsApp</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            </div>
-            <div class="contact-text">
-              <strong>Email:</strong> <a href="mailto:malecombop@gmail.com">malecombop@gmail.com</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
-            </div>
-            <div class="contact-text">
-              <strong>Business Address:</strong> 92 Koranna Avenue, Doringkloof, Centurion, 0157
-            </div>
-          </div>
+          <div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><div class="contact-text"><strong>Primary:</strong> <a href="tel:0788195158">078 819 5158</a> <a href="https://wa.me/27788195158" target="_blank" class="whatsapp-link">💬 WhatsApp</a></div></div>
+          <div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><div class="contact-text"><strong>Secondary:</strong> <a href="tel:0635160456">063 516 0456</a> <a href="https://wa.me/27635160456" target="_blank" class="whatsapp-link">💬 WhatsApp</a></div></div>
+          <div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div><div class="contact-text"><strong>Email:</strong> <a href="mailto:malecombop@gmail.com">malecombop@gmail.com</a></div></div>
+          <div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg></div><div class="contact-text"><strong>Business Address:</strong> 92 Koranna Avenue, Doringkloof, Centurion, 0157</div></div>
           
           <h3 style="margin-top: 25px;">Working Hours</h3>
           <p>Monday - Friday: 7:00 AM - 5:00 PM</p>
           <p>Saturday: 8:00 AM - 1:00 PM</p>
           <p>Sunday: Emergency call-outs only</p>
-          
-          <h3 style="margin-top: 25px;">Service Areas</h3>
-          <p>Limpopo Province (Mokopane, Sekgakgapeng, Tzaneen, Polokwane)</p>
-          <p>Mpumalanga Province (Steelpoort, Burgersfort)</p>
-          <p>Gauteng (Selected Projects)</p>
 
-          <!-- Large WhatsApp Quote Button -->
           <div style="text-align: center; margin-top: 30px;">
-            <a href="https://wa.me/27788195158?text=Hello%20Malecombo,%20I%20would%20like%20to%20request%20a%20PROJECT%20QUOTE.%20Please%20let%20me%20know%20what%20details%20you%20need." target="_blank" class="btn btn-whatsapp" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 1.1rem; padding: 15px;">
-              <svg viewBox="0 0 32 32" style="width: 28px; height: 28px; fill: white;"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958C9.72 31.016 12.742 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.32 22.616c-.388 1.096-1.932 2.008-3.176 2.272-.852.18-1.964.324-5.708-1.224-4.796-1.984-7.884-6.84-8.124-7.156-.232-.316-1.932-2.572-1.932-4.904s1.224-3.472 1.66-3.948c.436-.476.952-.592 1.268-.592.316 0 .632.004.908.016.292.012.68-.11 1.064.812.388.936 1.324 3.228 1.44 3.464.116.236.196.512.04.828-.156.316-.236.512-.472.788-.236.276-.496.616-.708.828-.236.236-.484.492-.208.968.276.476 1.228 2.024 2.632 3.272 1.812 1.612 3.34 2.112 3.816 2.348.476.236.752.196 1.028-.116.276-.316 1.188-1.384 1.504-1.86.316-.476.632-.396 1.068-.236.436.156 2.756 1.3 3.232 1.536.476.236.792.356.908.552.116.196.116 1.128-.272 2.224z"/></svg>
-              Request Quick Quote via WhatsApp
+            <a href="https://wa.me/27788195158?text=Hello%20Malecombo,%20I%20would%20like%20to%20request%20a%20PROJECT%20QUOTE." target="_blank" class="btn btn-whatsapp" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 1.1rem; padding: 15px;">
+              <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i> Request Quick Quote via WhatsApp
             </a>
           </div>
-          
-          <div class="guarantee" style="margin-top: 30px;">
-            ✅ All projects include our commitment to quality, safety, and on-time delivery.
-          </div>
         </div>
       </div>
     </section>
   </div>
 
-  <!-- PRIVACY POLICY PAGE -->
-  <div id="privacy" class="page">
-    <section class="container legal-page">
-      <h2 class="section-title">Privacy Policy</h2>
-      <p>Malecombo Trading Enterprise CC respects your privacy and processes personal information in line with the Protection of Personal Information Act (POPIA).</p>
-      <h3>Information we collect</h3>
-      <p>We only collect the details you choose to give us through our quote request and newsletter forms, such as your name, phone number, email address, company name and project details.</p>
-      <h3>How we use it</h3>
-      <p>Your information is used solely to respond to your enquiry, prepare quotations, and — if you subscribed — send you occasional updates about our projects and services. We do not sell or share your information with third parties for marketing.</p>
-      <h3>Your rights</h3>
-      <p>You may ask us at any time to access, correct or delete your personal information, or to unsubscribe from updates, by emailing <a href="mailto:malecombop@gmail.com">malecombop@gmail.com</a> or calling <a href="tel:0788195158">078 819 5158</a>.</p>
-    </section>
-  </div>
-
-  <!-- LEGAL NOTICE PAGE -->
-  <div id="legal" class="page">
-    <section class="container legal-page">
-      <h2 class="section-title">Legal Notice</h2>
-      <h3>Company details</h3>
-      <p>Malecombo Trading Enterprise CC<br>Registration No: 2011/066408/23<br>VAT No: 4090296379<br>Stand No 1240, Sekgakgapeng, Mokopane, 0651, Limpopo, South Africa</p>
-      <h3>Use of this website</h3>
-      <p>The content on this website is provided for general information about our services and completed projects. While we take care to keep it accurate and up to date, it does not constitute a binding offer; all work is subject to a formal quotation and agreement.</p>
-      <h3>Intellectual property</h3>
-      <p>All text, images, logos and graphics on this website are the property of Malecombo Trading Enterprise CC unless otherwise stated, and may not be reproduced without written permission.</p>
-    </section>
-  </div>
-
-  <!-- TERMS OF SERVICE PAGE -->
-  <div id="terms" class="page">
-    <section class="container legal-page">
-      <h2 class="section-title">Terms of Service</h2>
-      <p>By using this website you agree to the following terms. If you do not agree, please do not use the site.</p>
-      <h3>Quotations and services</h3>
-      <p>Information on this website and responses to quote requests are provided for guidance only. All work is subject to a formal written quotation, site assessment where required, and a signed agreement between Malecombo Trading Enterprise CC and the client.</p>
-      <h3>Acceptable use</h3>
-      <p>You agree not to misuse this website, submit false information through our forms, or attempt to interfere with its operation or security.</p>
-      <h3>Limitation of liability</h3>
-      <p>While we take care to keep the content of this website accurate, Malecombo Trading Enterprise CC is not liable for any loss arising from reliance on information published here.</p>
-      <h3>Governing law</h3>
-      <p>These terms are governed by the laws of the Republic of South Africa. Questions can be sent to <a href="mailto:malecombop@gmail.com">malecombop@gmail.com</a>.</p>
-    </section>
-  </div>
-
-  <!-- COOKIE POLICY PAGE -->
-  <div id="cookies" class="page">
-    <section class="container legal-page">
-      <h2 class="section-title">Cookie Policy</h2>
-      <p>This website does not use advertising or tracking cookies.</p>
-      <h3>Third-party services</h3>
-      <p>Some features rely on third-party services, such as web fonts, icons and form processing. These providers may set or read technical cookies or log basic request information (such as your IP address) to deliver their service.</p>
-      <h3>Managing cookies</h3>
-      <p>You can block or delete cookies at any time in your browser settings. Doing so will not affect your ability to browse this website or contact us.</p>
-    </section>
-  </div>
-
-  <!-- Footer -->
+  <!-- IVANHOE-STYLE FOOTER -->
   <footer>
     <div class="container">
-      <!-- Footer top: brand + main navigation -->
       <div class="footer-top">
-        <a href="#" class="footer-brand" data-page="home">
-          <span class="footer-brand-name">MALECOMBO</span>
-          <span class="footer-brand-sub">Trading Enterprise CC</span>
-        </a>
-        <nav class="footer-nav" aria-label="Footer">
-          <a href="#" data-page="home">Home</a>
-          <a href="#" data-page="about">About Us</a>
-          <a href="#" data-page="services">Services</a>
-          <a href="#" data-page="projects">Projects</a>
-          <a href="#" data-page="about" data-section="compliance">Compliance</a>
-          <a href="#" data-page="contact">Contact</a>
-          <a href="mailto:malecombop@gmail.com?subject=Careers%20Enquiry">Careers</a>
-        </nav>
-      </div>
+        <!-- Column 1: Company Info -->
+        <div class="footer-col">
+          <div class="footer-logo">
+            <svg viewBox="0 0 500 160" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(70, 80)">
+                <g fill="#8B8B8B"><rect x="-6" y="-65" width="12" height="15" rx="2"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(30)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(60)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(90)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(120)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(150)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(180)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(210)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(240)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(270)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(300)"/><rect x="-6" y="-65" width="12" height="15" rx="2" transform="rotate(330)"/></g>
+                <circle cx="0" cy="0" r="55" fill="#A9A9A9"/><circle cx="0" cy="0" r="40" fill="#FFFFFF"/><circle cx="0" cy="0" r="20" fill="#8B8B8B"/><circle cx="0" cy="0" r="8" fill="#FFFFFF"/>
+              </g>
+              <text x="280" y="85" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="bold" fill="#FFFFFF" letter-spacing="2" text-anchor="middle">MALECOMBO</text>
+              <text x="280" y="120" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#5DADE2" letter-spacing="4" text-anchor="middle">TRADING ENTERPRISE CC</text>
+            </svg>
+          </div>
+          <p>Building infrastructure with a greater purpose. A 100% Black-owned construction and civil works enterprise committed to excellence, safety, and transformation in South Africa.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/malecombo" target="_blank" rel="noopener noreferrer" aria-label="Facebook Construction"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/malecomboprojects" target="_blank" rel="noopener noreferrer" aria-label="Facebook Projects"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
 
-      <p class="footer-about">Providing quality construction, civil engineering, and mining support services since 2011. Committed to excellence, safety, and transformation.</p>
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#" data-page="home">Home</a></li>
+            <li><a href="#" data-page="about">About Us</a></li>
+            <li><a href="#" data-page="services">Services</a></li>
+            <li><a href="#" data-page="projects">Projects</a></li>
+            <li><a href="#" data-page="contact">Contact Us</a></li>
+            <li><a href="https://wa.me/27635160456?text=Hello%20Malecombo,%20I%20am%20interested%20in%20a%20career%20opportunity." target="_blank"><i class="fab fa-whatsapp" style="margin-right: 8px; color: var(--whatsapp-green);"></i> Careers (WhatsApp)</a></li>
+            <li><a href="mailto:malecombop@gmail.com?subject=Career%20Application"><i class="fas fa-envelope" style="margin-right: 8px; color: var(--primary-blue);"></i> Careers (Email)</a></li>
+          </ul>
+        </div>
 
-      <!-- Footer link columns -->
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>About Us</h3>
-          <a href="#" data-page="about" data-section="company-overview">Company Overview</a>
-          <a href="#" data-page="about" data-section="vision-mission">Vision &amp; Mission</a>
-          <a href="#" data-page="about" data-section="core-values">Core Values</a>
-          <a href="#" data-page="about" data-section="board-of-directors">Board of Directors</a>
-          <a href="#" data-page="about" data-section="organizational-structure">Organizational Structure</a>
+        <!-- Column 3: Our Services -->
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#" data-page="services">Mining Civil Works</a></li>
+            <li><a href="#" data-page="services">Construction Services</a></li>
+            <li><a href="#" data-page="services">Civil Engineering</a></li>
+            <li><a href="#" data-page="services">Drill & Blast Support</a></li>
+            <li><a href="#" data-page="services">Plant Maintenance</a></li>
+            <li><a href="#" data-page="services">Equipment Hire</a></li>
+          </ul>
         </div>
-        <div class="footer-section">
-          <h3>Services</h3>
-          <a href="#" data-page="services">Civil Engineering Construction</a>
-          <a href="#" data-page="services">Commercial &amp; Industrial Building</a>
-          <a href="#" data-page="services">Residential Building</a>
-          <a href="#" data-page="services">Mining &amp; Industrial Civil Works</a>
-          <a href="#" data-page="services">Drill &amp; Blast Support</a>
-          <a href="#" data-page="services">Plant Maintenance &amp; Cleaning</a>
-          <a href="#" data-page="services">Equipment Hire</a>
-        </div>
-        <div class="footer-section">
-          <h3>Company</h3>
-          <a href="#" data-page="projects">Completed Projects</a>
-          <a href="#" data-page="about" data-section="compliance">Compliance &amp; Statutory Info</a>
-          <a href="#" data-page="contact">Request a Quote</a>
-          <p style="color: var(--gold); font-weight: bold; margin-top: 15px;">100% Black Owned | B-BBEE Compliant</p>
-          <h3 style="margin-top: 20px;">Business Hours</h3>
-          <p>Mon - Fri: 7:00 AM - 5:00 PM</p>
-          <p>Saturday: 8:00 AM - 1:00 PM</p>
-          <p>Sunday: Emergency only</p>
-        </div>
-        <div class="footer-section">
-          <h3>Contact Us</h3>
-          <div class="contact-item" style="margin: 8px 0;">
-            <div class="contact-icon" style="color: #e0e0e0; margin-top: 2px;">
-              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            </div>
-            <div class="contact-text" style="color: #e0e0e0;">
-              <a href="tel:0788195158" style="color: #e0e0e0;">078 819 5158</a>
-              <a href="tel:0635160456" style="color: #e0e0e0;">063 516 0456</a>
-            </div>
-          </div>
-          <div class="contact-item" style="margin: 8px 0;">
-            <div class="contact-icon" style="color: #e0e0e0; margin-top: 2px;">
-              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            </div>
-            <div class="contact-text" style="color: #e0e0e0;">
-              <a href="mailto:malecombop@gmail.com" style="color: #e0e0e0;">malecombop@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-item" style="margin: 8px 0;">
-            <div class="contact-icon" style="color: #e0e0e0; margin-top: 2px;">
-              <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
-            </div>
-            <div class="contact-text" style="color: #e0e0e0;">
-              92 Koranna Avunue, Doringkloof, Centurion, 0157
-            </div>
-          </div>
-          <div class="contact-item" style="margin: 8px 0;">
-            <div class="contact-icon" style="color: var(--whatsapp-green); margin-top: 2px;">
-              <svg viewBox="0 0 32 32" style="fill: currentColor;"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958C9.72 31.016 12.742 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.32 22.616c-.388 1.096-1.932 2.008-3.176 2.272-.852.18-1.964.324-5.708-1.224-4.796-1.984-7.884-6.84-8.124-7.156-.232-.316-1.932-2.572-1.932-4.904s1.224-3.472 1.66-3.948c.436-.476.952-.592 1.268-.592.316 0 .632.004.908.016.292.012.68-.11 1.064.812.388.936 1.324 3.228 1.44 3.464.116.236.196.512.04.828-.156.316-.236.512-.472.788-.236.276-.496.616-.708.828-.236.236-.484.492-.208.968.276.476 1.228 2.024 2.632 3.272 1.812 1.612 3.34 2.112 3.816 2.348.476.236.752.196 1.028-.116.276-.316 1.188-1.384 1.504-1.86.316-.476.632-.396 1.068-.236.436.156 2.756 1.3 3.232 1.536.476.236.792.356.908.552.116.196.116 1.128-.272 2.224z"/></svg>
-            </div>
-            <div class="contact-text">
-              <a href="https://wa.me/27788195158" target="_blank" style="color: var(--whatsapp-green); font-weight: bold;">Chat on WhatsApp</a>
-            </div>
-          </div>
+
+        <!-- Column 4: Connect & Resources -->
+        <div class="footer-col">
+          <h4>Connect With Us</h4>
+          <ul>
+            <li><a href="https://www.facebook.com/malecombo" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook" style="margin-right: 8px; color: #1877F2;"></i> Malecombo Construction Projects</a></li>
+            <li><a href="https://www.facebook.com/malecomboprojects" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook" style="margin-right: 8px; color: #1877F2;"></i> Malecombo Projects (Tools & Equipment)</a></li>
+          </ul>
+          <h4 style="margin-top: 25px;">Resources & Documents</h4>
+          <ul>
+            <li><a href="documents/Malecombo_Company_Profile.pdf" target="_blank"><i class="fas fa-file-pdf" style="margin-right: 8px; color: #e74c3c;"></i> Company Profile (PDF)</a></li>
+            <li><a href="documents/Malecombo_BBEE_Certificate.pdf" target="_blank"><i class="fas fa-file-pdf" style="margin-right: 8px; color: #e74c3c;"></i> B-BBEE Certificate</a></li>
+            <li><a href="#"><i class="fas fa-shield-alt" style="margin-right: 8px; color: var(--gold);"></i> Privacy Policy</a></li>
+            <li><a href="#"><i class="fas fa-file-contract" style="margin-right: 8px; color: var(--gold);"></i> Terms of Service</a></li>
+          </ul>
         </div>
       </div>
 
-      <!-- Subscribe for Updates -->
+      <!-- SUBSCRIBE FOR UPDATES SECTION -->
       <div class="footer-subscribe">
-        <h3>Subscribe for Updates</h3>
-        <form id="subscribeForm" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="subscribe-form">
-          <input type="hidden" name="form-name" value="newsletter">
-          <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
-          <label for="subscribe-email" class="visually-hidden">Email address</label>
-          <input type="email" id="subscribe-email" name="email" placeholder="EMAIL ADDRESS" required>
-          <button type="submit" aria-label="Subscribe">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-          </button>
+        <div class="footer-subscribe-text">
+          <h4>Subscribe for Updates</h4>
+          <p>No spam, notifications only about company news, project updates, and industry insights. You can always unsubscribe.</p>
+        </div>
+        <form class="footer-subscribe-form" action="https://formspree.io/f/xgvrqzgk" method="POST">
+          <input type="hidden" name="_subject" value="Newsletter Subscription">
+          <input type="email" name="email" placeholder="Enter your email address" required>
+          <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
         </form>
-        <p class="subscribe-note" id="subscribeNote">No spam, only news about our projects, services and company updates. You can always unsubscribe.</p>
       </div>
 
-      <!-- Footer bottom: copyright, legal links, social -->
       <div class="footer-bottom">
-        <div class="footer-copy">
-          <p>&copy; <span id="footerYear">2024</span> | MALECOMBO TRADING ENTERPRISE CC. All rights reserved.</p>
-          <p>Reg: 2011/066408/23 | VAT No: 4090296379 | B-BBEE Status: 100% Black Owned</p>
+        <div>
+          &copy; 2024 Malecombo Trading Enterprise CC. All rights reserved. | Reg: 2011/066408/23 | VAT: 4090296379
         </div>
-        <div class="footer-legal">
-          <a href="#" data-page="privacy">Privacy Policy</a>
-          <a href="#" data-page="terms">Terms of Service</a>
-          <a href="#" data-page="cookies">Cookie Policy</a>
-          <a href="#" data-page="legal">Legal Notice</a>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Legal Notice</a>
+          <a href="#">Sitemap</a>
         </div>
-        <div class="footer-social">
-          <a href="https://wa.me/27788195158" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg viewBox="0 0 32 32"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958C9.72 31.016 12.742 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.32 22.616c-.388 1.096-1.932 2.008-3.176 2.272-.852.18-1.964.324-5.708-1.224-4.796-1.984-7.884-6.840-8.124-7.156-.232-.316-1.932-2.572-1.932-4.904s1.224-3.472 1.660-3.948c.436-.476.952-.592 1.268-.592.316 0 .632.004.908.016.292.012.680-.110 1.064.812.388.936 1.324 3.228 1.440 3.464.116.236.196.512.040.828-.156.316-.236.512-.472.788-.236.276-.496.616-.708.828-.236.236-.484.492-.208.968.276.476 1.228 2.024 2.632 3.272 1.812 1.612 3.340 2.112 3.816 2.348.476.236.752.196 1.028-.116.276-.316 1.188-1.384 1.504-1.860.316-.476.632-.396 1.068-.236.436.156 2.756 1.300 3.232 1.536.476.236.792.356.908.552.116.196.116 1.128-.272 2.224z"/></svg>
-          </a>
-          <a href="mailto:malecombop@gmail.com" aria-label="Email">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          </a>
-          <a href="tel:0788195158" aria-label="Call us">
-            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          </a>
-          <!-- TODO: replace "#" with the company's social media profile URLs -->
-          <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
-        <p class="footer-tagline">Designed with excellence in mind | Proudly South African</p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Page Navigation Logic
+    // IMPROVED SMOOTH SCROLL NAVIGATION LOGIC
     function showPage(pageId) {
+      // 1. Hide all pages
       document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-      document.getElementById(pageId).classList.add('active');
       
+      // 2. Show the selected page
+      const targetPage = document.getElementById(pageId);
+      if (targetPage) {
+        targetPage.classList.add('active');
+      }
+      
+      // 3. Update active nav link styling
       document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
-        if(link.getAttribute('data-page') === pageId) link.classList.add('active');
+        if (link.getAttribute('data-page') === pageId) {
+          link.classList.add('active');
+        }
       });
       
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      
-      if(pageId === 'contact') {
-        setTimeout(() => {
-          const formSection = document.getElementById('contact');
-          if(formSection) {
-            window.scrollTo({ top: formSection.offsetTop - 100, behavior: 'smooth' });
-          }
-        }, 100);
-      }
+      // 4. Smooth scroll to the top of the new page after a tiny delay to allow rendering
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 50);
+
+      // 5. Automatically close the mobile menu if it's open
+      document.getElementById('mobileMenu').style.display = 'none';
     }
 
     // Attach click events to all navigation links and buttons with data-page attribute
-    document.querySelectorAll('.nav-link, .btn[data-page], .logo, footer a[data-page]').forEach(link => {
+    document.querySelectorAll('.nav-link, .btn[data-page], .logo, .footer-col a[data-page]').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
         const pageId = this.getAttribute('data-page') || 'home';
         showPage(pageId);
-
-        // Footer links can point to a specific section within a page
-        const sectionId = this.getAttribute('data-section');
-        if(sectionId) {
-          setTimeout(() => {
-            const section = document.getElementById(sectionId);
-            if(section) window.scrollTo({ top: section.getBoundingClientRect().top + window.scrollY - 110, behavior: 'smooth' });
-          }, 150);
-        }
       });
-    });
-
-    // Keep the footer copyright year current
-    document.getElementById('footerYear').textContent = new Date().getFullYear();
-
-    // Newsletter subscription (Netlify Forms)
-    document.getElementById('subscribeForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const note = document.getElementById('subscribeNote');
-      const button = this.querySelector('button');
-      button.disabled = true;
-
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(this)).toString()
-      })
-      .then(response => {
-        if(!response.ok) throw new Error('Subscription failed');
-        note.textContent = 'Thank you for subscribing! You will receive our latest updates by email.';
-        this.reset();
-      })
-      .catch(() => {
-        note.textContent = 'Sorry, something went wrong. Please try again or email us at malecombop@gmail.com.';
-      })
-      .finally(() => { button.disabled = false; });
     });
 
     // Formspree AJAX Submission Handler
@@ -1088,26 +704,17 @@
       submitBtn.textContent = 'Sending Quote Request...';
       submitBtn.disabled = true;
 
-      fetch(this.action, { 
-        method: 'POST', 
-        body: new FormData(this), 
-        headers: { 'Accept': 'application/json' } 
-      })
+      fetch(this.action, { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } })
       .then(response => {
         if(response.ok) {
           alert('Thank you! Your quote request has been sent successfully. Malecombo will contact you within 24 hours.');
           this.reset();
         } else {
-          alert('Oops! Something went wrong. Please WhatsApp us directly at 078 819 5158 for a quick quote.');
+          alert('Oops! Something went wrong. Please WhatsApp us directly at 078 819 5158.');
         }
       })
-      .catch(error => {
-        alert('Error: ' + error.message);
-      })
-      .finally(() => { 
-        submitBtn.textContent = originalText; 
-        submitBtn.disabled = false; 
-      });
+      .catch(error => alert('Error: ' + error.message))
+      .finally(() => { submitBtn.textContent = originalText; submitBtn.disabled = false; });
     });
 
     // Mobile Menu Toggle
@@ -1115,11 +722,8 @@
       const menu = document.getElementById('mobileMenu');
       menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     });
-    
     document.querySelectorAll('.mobile-menu a').forEach(link => {
-      link.addEventListener('click', function() { 
-        document.getElementById('mobileMenu').style.display = 'none'; 
-      });
+      link.addEventListener('click', function() { document.getElementById('mobileMenu').style.display = 'none'; });
     });
   </script>
 
