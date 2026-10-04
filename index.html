@@ -65,7 +65,7 @@
 
     /* Hero Section */
     .hero { 
-      background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 91, 150, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center; 
+      background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 91, 150, 0.85)), url('https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/Valterra_Image_1022') no-repeat center center; 
       background-size: cover; color: white; text-align: center; padding: 120px 20px; 
     }
     .hero h1 { font-size: 2.8rem; margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.2; }
@@ -84,6 +84,7 @@
     .service-card ul { list-style: none; margin: 15px 0; }
     .service-card li { padding: 8px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start; font-size: 0.95rem; }
     .service-card li:before { content: "✓"; color: var(--secondary-green); font-weight: bold; margin-right: 10px; flex-shrink: 0; }
+    .service-image { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
 
     /* Features */
     .features { background-color: var(--light-gray); }
@@ -279,8 +280,8 @@
       <h2 class="section-title">Our Core Specializations</h2>
       <div class="services-grid">
         <div class="service-card">
-          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">️</div>
-          <h3>Mining Civil Works</h3>
+          <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/anglo-american-zimbabwe" alt="Mining & Industrial Civil Works" class="service-image">
+          <h3>Mining & Industrial Civil Works</h3>
           <ul>
             <li>Form-work design, erection and striking for mining structures</li>
             <li>Steel fixing and reinforcing for mining concrete structures</li>
@@ -290,7 +291,7 @@
           </ul>
         </div>
         <div class="service-card">
-          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">️</div>
+          <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/images" alt="Construction Services" class="service-image">
           <h3>Construction Services</h3>
           <ul>
             <li>Commercial and industrial building construction</li>
@@ -301,7 +302,7 @@
           </ul>
         </div>
         <div class="service-card">
-          <div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🔧</div>
+          <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/Equpment_Hire" alt="Support Services & Plant Hire" class="service-image">
           <h3>Support Services & Plant Hire</h3>
           <ul>
             <li>Drill & blast support services</li>
@@ -320,13 +321,40 @@
         <div class="features-grid">
           <div class="feature"><div class="feature-icon">✅</div><div><strong>Proven Expertise</strong> – 10+ years of experience in mining and construction projects across Limpopo and Mpumalanga.</div></div>
           <div class="feature"><div class="feature-icon">🏆</div><div><strong>Quality Assurance</strong> – Rigorous quality control systems ensuring compliance with all specifications.</div></div>
-          <div class="feature"><div class="feature-icon"></div><div><strong>Skilled Workforce</strong> – Experienced personnel with specialized skills in mining infrastructure.</div></div>
+          <div class="feature"><div class="feature-icon">👷</div><div><strong>Skilled Workforce</strong> – Experienced personnel with specialized skills in mining infrastructure.</div></div>
           <div class="feature"><div class="feature-icon">🤝</div><div><strong>Community Focus</strong> – Committed to local employment, skills development, and transformation.</div></div>
-          <div class="feature"><div class="feature-icon">️</div><div><strong>Safety First</strong> – Zero harm approach to all operations, meeting Anglo American's SHEQ standards.</div></div>
+          <div class="feature"><div class="feature-icon">🛡️</div><div><strong>Safety First</strong> – Zero harm approach to all operations, meeting Anglo American's SHEQ standards.</div></div>
           <div class="feature"><div class="feature-icon">📊</div><div><strong>Project Excellence</strong> – On-time, on-budget delivery with meticulous attention to detail.</div></div>
         </div>
       </div>
     </section>
+
+    <!-- NEW ADDITION: Compliance & Sustainability Section on Home Page -->
+    <section class="container" style="padding-top: 20px;">
+      <h2 class="section-title" style="color: var(--secondary-green);">Compliance & Sustainability</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--dark-gray); font-size: 1.1rem;">
+        Malecombo Trading Enterprise CC operates with the highest standards of corporate governance, environmental stewardship, and social responsibility — fully aligned with the ESG requirements of major mining and infrastructure clients.
+      </p>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon" style="background: var(--secondary-green);">🌱</div>
+          <div><strong>Environmental Stewardship</strong> – Strict adherence to Environmental Management Plans (EMPs), responsible waste management, dust suppression, and site rehabilitation on every project.</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon" style="background: var(--gold); color: #000;">🤝</div>
+          <div><strong>Social & Labour Development</strong> – Prioritizing local host community employment and procurement in Limpopo and Mpumalanga, with active skills transfer and learnership programs.</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🛡️</div>
+          <div><strong>Mine Health & Safety (MHSA)</strong> – "Zero Harm" culture aligned with Anglo American and Ivanplats SHEQ standards. Fully compliant with OHSA and MHSA regulations.</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⚖️</div>
+          <div><strong>Ethical Governance</strong> – Transparent operations, CSD registered, fully compliant with the Mining Charter 2018, and maintaining 100% Black-Owned B-BBEE status.</div>
+        </div>
+      </div>
+    </section>
+    <!-- END NEW ADDITION -->
 
     <section class="container" style="text-align: center; background: var(--light-gray); padding: 50px 20px; border-radius: 8px;">
       <h2>Ready to Start Your Construction Project?</h2>
@@ -336,7 +364,7 @@
         ✉️ <strong>Email:</strong> malecombop@gmail.com
       </p>
       <p style="margin-bottom: 25px; font-size: 1rem;">
-         <strong>Business Address:</strong> 92 Koranna Avenue, Doringkloof, Centurion, 0157
+        📍 <strong>Business Address:</strong> 92 Koranna Avenue, Doringkloof, Centurion, 0157
       </p>
       <a href="#" class="btn" data-page="contact">Request Project Quote</a>
     </section>
@@ -382,7 +410,7 @@
         
         <div class="board-grid">
           <div class="board-card chairman">
-            <img src="images/board-chairman.jpg" alt="Mr. Johannes Mphahlele" class="board-photo" onerror="this.style.display='none'">
+            <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/Elderly_man" alt="Mr. Johannes Mphahlele - Board Chairman" class="board-photo" onerror="this.src='https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/Elderly_man.jpg'">
             <div class="board-info">
               <span class="board-position">Board Chairman</span>
               <h3 class="board-name">Mr. Johannes Mphahlele</h3>
@@ -393,8 +421,9 @@
               <div class="board-qualifications"><strong>Qualifications:</strong> BCom (Hons), MBA, Certified Director (IoDSA)</div>
             </div>
           </div>
+
           <div class="board-card">
-            <img src="images/board-ceo.jpg" alt="Ms. Thandiwe Mokoena" class="board-photo" onerror="this.style.display='none'">
+            <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/Modern_Professional_Headshot_Ideas___Corporate_Styling_for_Women_in_BusinessWoman_Outfit_ideas" alt="Ms. Thandiwe Mokoena - Chief Executive Officer" class="board-photo" onerror="this.src='https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/Modern_Professional_Headshot_Ideas___Corporate_Styling_for_Women_in_BusinessWoman_Outfit_ideas.jpg'">
             <div class="board-info">
               <span class="board-position">Chief Executive Officer</span>
               <h3 class="board-name">Ms. Thandiwe Mokoena</h3>
@@ -405,8 +434,9 @@
               <div class="board-qualifications"><strong>Qualifications:</strong> BEng Civil, MBL, Pr.Eng (ECSA)</div>
             </div>
           </div>
+
           <div class="board-card">
-            <img src="images/board-finance.jpg" alt="Mr. Sipho Ndlovu" class="board-photo" onerror="this.style.display='none'">
+            <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/15903404930758645" alt="Mr. Sipho Ndlovu - Chief Financial Officer" class="board-photo" onerror="this.src='https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/15903404930758645.jpg'">
             <div class="board-info">
               <span class="board-position">Chief Financial Officer</span>
               <h3 class="board-name">Mr. Sipho Ndlovu</h3>
@@ -417,8 +447,9 @@
               <div class="board-qualifications"><strong>Qualifications:</strong> BCom Accounting, CA(SA), MBA</div>
             </div>
           </div>
+
           <div class="board-card">
-            <img src="images/board-legal.jpg" alt="Ms. Naledi Khumalo" class="board-photo" onerror="this.style.display='none'">
+            <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/7599893117809528" alt="Ms. Naledi Khumalo - Chief Legal Officer" class="board-photo" onerror="this.src='https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/7599893117809528.jpg'">
             <div class="board-info">
               <span class="board-position">Chief Legal Officer</span>
               <h3 class="board-name">Ms. Naledi Khumalo</h3>
@@ -429,8 +460,9 @@
               <div class="board-qualifications"><strong>Qualifications:</strong> LLB, LLM (Corporate Law), Admitted Attorney</div>
             </div>
           </div>
+
           <div class="board-card">
-            <img src="images/board-sustainability.jpg" alt="Ms. Zanele Dlamini" class="board-photo" onerror="this.style.display='none'">
+            <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/984669906042655094" alt="Ms. Zanele Dlamini - Chief Sustainability Officer" class="board-photo" onerror="this.src='https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/984669906042655094.jpg'">
             <div class="board-info">
               <span class="board-position">Chief Sustainability Officer</span>
               <h3 class="board-name">Ms. Zanele Dlamini</h3>
@@ -473,6 +505,46 @@
         <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);"><div style="font-weight: bold; color: var(--primary-blue);">COIDA</div><div>Letter of Good Standing</div></div>
         <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);"><div style="font-weight: bold; color: var(--primary-blue);">ISO 9001:2015</div><div>In Process</div></div>
       </div>
+
+      <!-- NEW ADDITION: Expanded Compliance & Sustainability Section on About Page -->
+      <section style="background: var(--light-gray); padding: 50px 30px; border-radius: 12px; margin-top: 40px; border-top: 5px solid var(--secondary-green);">
+        <h3 style="text-align: center; margin-bottom: 30px; color: var(--primary-blue);">Our ESG & Sustainability Commitment</h3>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--dark-gray);">
+          Malecombo Trading Enterprise CC is deeply committed to operating with the highest standards of corporate governance, environmental stewardship, and social responsibility. We align our operations with global ESG principles and South African regulatory frameworks required by top-tier mining houses.
+        </p>
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon" style="background: var(--secondary-green);">🌱</div>
+            <div>
+              <strong>Environmental Stewardship</strong>
+              <p style="font-size: 0.9rem; margin-top: 5px; color: var(--dark-gray);">Strict adherence to Environmental Management Plans (EMPs) on all sites. We prioritize waste reduction, water conservation, dust suppression, and responsible rehabilitation of mining and civil work sites.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon" style="background: var(--gold); color: #000;">🤝</div>
+            <div>
+              <strong>Social & Labour Development</strong>
+              <p style="font-size: 0.9rem; margin-top: 5px; color: var(--dark-gray);">Prioritizing local procurement and hiring from host communities in Limpopo and Mpumalanga. Active investment in skills development, SLP alignment, and learnership programs for emerging artisans.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <div>
+              <strong>SHEQ Excellence</strong>
+              <p style="font-size: 0.9rem; margin-top: 5px; color: var(--dark-gray);">An uncompromising "Zero Harm" safety culture aligned with major mining SHEQ standards. Continuous pursuit of ISO 14001 (Environmental) and ISO 45001 (Occupational Health & Safety) certifications.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">⚖️</div>
+            <div>
+              <strong>Ethical Governance</strong>
+              <p style="font-size: 0.9rem; margin-top: 5px; color: var(--dark-gray);">Transparent, accountable operations with strict anti-corruption policies. Fully compliant with the Mining Charter 2018, Department of Labour regulations, and B-BBEE codes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END NEW ADDITION -->
+
     </section>
   </div>
 
@@ -482,11 +554,11 @@
       <h2 class="section-title">Our Specialized Services</h2>
       <div class="services-grid">
         <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🏗️</div><h3>Civil Engineering Construction</h3><ul><li>Routine road maintenance (signs, lay-byes, gabions, guardrails)</li><li>Emergency road repairs, fencing, and bush clearing</li><li>Road marking, paving, and road caps</li><li>Water reservoirs, sub-divisions, sewer systems, bridges, tunnels, and dams</li><li>V-drains, pre-cast elements, and stormwater structures</li></ul></div>
-        <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;"></div><h3>Commercial & Industrial Building</h3><ul><li>Construction and design of commercial malls and industrial facilities</li><li>Form-work and steel fixing / reinforcing (bar, mesh, post-tension)</li><li>Concrete mixing and pouring (mass and structural)</li><li>Steel structuring and boiler making</li><li>Scaffolding and shutter board supply / hire</li></ul></div>
+        <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🏢</div><h3>Commercial & Industrial Building</h3><ul><li>Construction and design of commercial malls and industrial facilities</li><li>Form-work and steel fixing / reinforcing (bar, mesh, post-tension)</li><li>Concrete mixing and pouring (mass and structural)</li><li>Steel structuring and boiler making</li><li>Scaffolding and shutter board supply / hire</li></ul></div>
         <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🏠</div><h3>Residential Building Construction</h3><ul><li>Grading, bulk earthworks, and excavation</li><li>Foundations, pest control, framing, and box cutting</li><li>Rough electrical wiring and rough plumbing</li><li>Brick laying, installation of windows and doors</li><li>Timber, steel, and thatch roofing; siding and plumbing</li></ul></div>
         <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">⛏️</div><h3>Mining & Industrial Civil Works</h3><ul><li>Form-work and steel fixing for mining concrete structures</li><li>Shaft development civil support and concrete shaft lining</li><li>Surface and underground piping installation and maintenance</li><li>Tailings storage facility (TSF) rehabilitation</li><li>Bulk earthworks, haul road construction, and security fencing</li></ul></div>
-        <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;"></div><h3>Drill & Blast Support Services</h3><ul><li>Surface blast-hole drilling (large-diameter rotary drilling)</li><li>Drill pattern layout and hole positioning</li><li>Drill rig scheduling and dispatch coordination</li><li>Blasting supervision and compliance (Competent A)</li><li>Drill crew supervision and rock-type specific drilling knowledge</li></ul></div>
-        <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;"></div><h3>Plant Maintenance & Cleaning</h3><ul><li>Process pipe unblocking and screener unchoking</li><li>Conveyor belt attendance and maintenance support</li><li>Commercial and industrial cleaning services</li><li>Site clearing, waste management, and high-pressure water jetting</li><li>Plant shutdown and planned maintenance support</li></ul></div>
+        <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🔧</div><h3>Drill & Blast Support Services</h3><ul><li>Surface blast-hole drilling (large-diameter rotary drilling)</li><li>Drill pattern layout and hole positioning</li><li>Drill rig scheduling and dispatch coordination</li><li>Blasting supervision and compliance (Competent A)</li><li>Drill crew supervision and rock-type specific drilling knowledge</li></ul></div>
+        <div class="service-card"><div style="font-size: 2.5rem; color: var(--primary-blue); text-align: center;">🧹</div><h3>Plant Maintenance & Cleaning</h3><ul><li>Process pipe unblocking and screener unchoking</li><li>Conveyor belt attendance and maintenance support</li><li>Commercial and industrial cleaning services</li><li>Site clearing, waste management, and high-pressure water jetting</li><li>Plant shutdown and planned maintenance support</li></ul></div>
       </div>
     </section>
   </div>
@@ -497,12 +569,54 @@
       <h2 class="section-title">Our Completed Projects</h2>
       <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">See the quality of our work. We've successfully completed numerous projects across Limpopo and Mpumalanga.</p>
       <div class="services-grid">
-        <div class="service-card"><h3>Ivanplats Platreef – Hitch Foundation Shaft 2</h3><p><strong>Client:</strong> Ivanplats (Pty) Ltd</p><p><strong>Location:</strong> Mokopane, Limpopo</p><p><strong>Scope:</strong> Form-work, steel fixing, reinforcing, and concrete works for Shaft 2 hitch foundation.</p></div>
-        <div class="service-card"><h3>ClearVu & Razor Wire Security Fencing</h3><p><strong>Client:</strong> Anglo American Platinum (Mogalakwena Mine)</p><p><strong>Location:</strong> Mokopane, Limpopo</p><p><strong>Scope:</strong> Supply and installation of high-security panel fencing and razor wire perimeter security.</p></div>
-        <div class="service-card"><h3>The Crossing Mall Parking Structure</h3><p><strong>Client:</strong> Commercial Client / Main Contractor</p><p><strong>Location:</strong> Mokopane, Limpopo</p><p><strong>Scope:</strong> Steel fixing, reinforcing, form-work, and concrete works for multi-level parking structure.</p></div>
-        <div class="service-card"><h3>Nkakabidi High School</h3><p><strong>Client:</strong> Department of Education</p><p><strong>Location:</strong> Sekgakgapeng, Limpopo</p><p><strong>Scope:</strong> Full building construction including foundations, brick laying, roofing, windows, doors, and finishing.</p></div>
-        <div class="service-card"><h3>Radingwana & Pienaars River Bridges</h3><p><strong>Client:</strong> RSC Mpumalanga</p><p><strong>Location:</strong> Limpopo / Gauteng border</p><p><strong>Scope:</strong> Material supply and construction support for bridge infrastructure projects.</p></div>
-        <div class="service-card"><h3>Basilread Pipeline – Olifants River</h3><p><strong>Client:</strong> RSC Burgersfort</p><p><strong>Location:</strong> Burgersfort / Steelpoort</p><p><strong>Scope:</strong> Supply and logistics support for pipeline installation on the Olifants River.</p></div>
+        
+        <div class="service-card">
+          <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/Malecombo_Picture" alt="Ivanplats Platreef – Hitch Foundation Shaft 2" class="service-image">
+          <h3>Ivanplats Platreef – Hitch Foundation Shaft 2</h3>
+          <p><strong>Client:</strong> Ivanplats (Pty) Ltd</p>
+          <p><strong>Location:</strong> Mokopane, Limpopo</p>
+          <p><strong>Scope:</strong> Form-work, steel fixing, reinforcing, and concrete works for Shaft 2 hitch foundation.</p>
+        </div>
+        
+        <div class="service-card">
+          <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/Sandsloot_ClearVu" alt="ClearVu & Razor Wire Security Fencing" class="service-image">
+          <h3>ClearVu & Razor Wire Security Fencing</h3>
+          <p><strong>Client:</strong> Anglo American Platinum (Mogalakwena Mine)</p>
+          <p><strong>Location:</strong> Mokopane, Limpopo</p>
+          <p><strong>Scope:</strong> Supply and installation of high-security panel fencing and razor wire perimeter security.</p>
+        </div>
+        
+        <div class="service-card">
+          <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/Mokopane_Mall" alt="The Crossing Mall Parking Structure" class="service-image">
+          <h3>The Crossing Mall Parking Structure</h3>
+          <p><strong>Client:</strong> Commercial Client / Main Contractor</p>
+          <p><strong>Location:</strong> Mokopane, Limpopo</p>
+          <p><strong>Scope:</strong> Steel fixing, reinforcing, form-work, and concrete works for multi-level parking structure.</p>
+        </div>
+        
+        <div class="service-card">
+          <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/FB_IMG_1691363598418" alt="Nkakabidi High School" class="service-image">
+          <h3>Nkakabidi High School</h3>
+          <p><strong>Client:</strong> Department of Education</p>
+          <p><strong>Location:</strong> Sekgakgapeng, Limpopo</p>
+          <p><strong>Scope:</strong> Full building construction including foundations, brick laying, roofing, windows, doors, and finishing.</p>
+        </div>
+        
+        <div class="service-card">
+          <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/Pienaans_River_Bridge" alt="Radingwana & Pienaars River Bridges" class="service-image">
+          <h3>Radingwana & Pienaars River Bridges</h3>
+          <p><strong>Client:</strong> RSC Mpumalanga</p>
+          <p><strong>Location:</strong> Limpopo / Gauteng border</p>
+          <p><strong>Scope:</strong> Material supply and construction support for bridge infrastructure projects.</p>
+        </div>
+        
+        <div class="service-card">
+          <img src="https://res.cloudinary.com/mbopwbbo/image/upload/f_auto,q_auto/Olihfants" alt="Basilread Pipeline – Olifants River" class="service-image">
+          <h3>Basilread Pipeline – Olifants River</h3>
+          <p><strong>Client:</strong> RSC Burgersfort</p>
+          <p><strong>Location:</strong> Burgersfort / Steelpoort</p>
+          <p><strong>Scope:</strong> Supply and logistics support for pipeline installation on the Olifants River.</p>
+        </div>
       </div>
     </section>
   </div>
@@ -567,7 +681,6 @@
   <footer>
     <div class="container">
       <div class="footer-top">
-        <!-- Column 1: Company Info -->
         <div class="footer-col">
           <div class="footer-logo">
             <svg viewBox="0 0 500 160" xmlns="http://www.w3.org/2000/svg">
@@ -588,7 +701,6 @@
           </div>
         </div>
 
-        <!-- Column 2: Quick Links -->
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
@@ -602,7 +714,6 @@
           </ul>
         </div>
 
-        <!-- Column 3: Our Services -->
         <div class="footer-col">
           <h4>Our Services</h4>
           <ul>
@@ -615,7 +726,6 @@
           </ul>
         </div>
 
-        <!-- Column 4: Connect & Resources -->
         <div class="footer-col">
           <h4>Connect With Us</h4>
           <ul>
@@ -632,7 +742,6 @@
         </div>
       </div>
 
-      <!-- SUBSCRIBE FOR UPDATES SECTION -->
       <div class="footer-subscribe">
         <div class="footer-subscribe-text">
           <h4>Subscribe for Updates</h4>
@@ -659,35 +768,24 @@
   </footer>
 
   <script>
-    // IMPROVED SMOOTH SCROLL NAVIGATION LOGIC
     function showPage(pageId) {
-      // 1. Hide all pages
       document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-      
-      // 2. Show the selected page
       const targetPage = document.getElementById(pageId);
       if (targetPage) {
         targetPage.classList.add('active');
       }
-      
-      // 3. Update active nav link styling
       document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('data-page') === pageId) {
           link.classList.add('active');
         }
       });
-      
-      // 4. Smooth scroll to the top of the new page after a tiny delay to allow rendering
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }, 50);
-
-      // 5. Automatically close the mobile menu if it's open
       document.getElementById('mobileMenu').style.display = 'none';
     }
 
-    // Attach click events to all navigation links and buttons with data-page attribute
     document.querySelectorAll('.nav-link, .btn[data-page], .logo, .footer-col a[data-page]').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -696,7 +794,6 @@
       });
     });
 
-    // Formspree AJAX Submission Handler
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const submitBtn = this.querySelector('button[type="submit"]');
@@ -717,7 +814,6 @@
       .finally(() => { submitBtn.textContent = originalText; submitBtn.disabled = false; });
     });
 
-    // Mobile Menu Toggle
     document.getElementById('menuToggle').addEventListener('click', function() {
       const menu = document.getElementById('mobileMenu');
       menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
